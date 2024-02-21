@@ -1,0 +1,196 @@
+#conteudoPrincipalQuiz{
+  background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-amaz.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  background-color: #F5F0F0;
+  height: 780px;
+}
+
+#teste2{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.curiosidadesContainer{
+  background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-amaz.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /*background-color: white;*/
+  padding: 50px 50px;
+  /*border: 5px solid green;*/
+  /*border-radius: 0% 70px 0% 70px;*/
+  min-height: 480px;
+  width: 850px;
+  margin: 100px auto 0 auto;
+}
+
+.curiosidade-box{
+  /* width: 60%; */
+  display: none;
+}
+
+.quiz-box{
+  width: 85%;
+}
+
+.curiosidade-content{
+  /* width: 50%;
+  position: relative;
+  bottom: 290px;
+  left: 0px; */
+  font-family: 'Montserrat', sans-serif;
+  min-height: 140px;
+    min-width: 750px;
+}
+
+.curiosidade-content > h3{
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.curiosidade-content > p{
+  font-size: 18px;
+}
+
+.quiz-content{
+  width: 80%;
+  position: relative;
+  bottom: 470px;
+  left: 100px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.quiz-content > p{
+  font-weight: 600;
+  font-size: 19px;
+  width: 80%;
+}
+
+.alternativas-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+ margin-left: 30px;  
+}
+
+.alternativas-item{
+  width: 300px;
+  height: 150px;
+  border: 3px solid #000;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  background-color: #FFF;
+}
+
+.alternativas-item:hover{
+  background-color: #018043;
+  color: #FFF;
+  border: 2px solid #018043;
+}
+
+.texto-label{
+  font-size: 16px;
+}
+
+#tituloCuriosidadeAmazonia{
+  color: #014421;
+}
+#tituloCuriosidadeCerrado{
+  color: #F0B323;
+}
+#tituloCuriosidadePantanal{
+  color: #afbc30;
+}
+#tituloCuriosidadeCaatinga{
+  color: #EA7C2C;
+}
+#tituloCuriosidadeMata{
+  color: #99425f;
+}
+#tituloCuriosidadePampas{
+  color: #7E6341;
+}
+
+.next-content-container{
+  /* position: relative;
+  bottom: 250px;
+  display: flex;
+  justify-content: center; */
+  display: flex;
+  gap: 15px;
+}
+
+.next-content{
+  width: 30px;
+  height: 30px;
+  border: 3px solid #1A1616;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-next-content{
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #014421;
+}
+
+.botao-jogar{
+  /* width: 20%;
+  position: relative;
+  bottom: 210px; */
+  cursor: pointer;
+  width: 20%;
+  position: relative;
+}
+
+.contagem-questoes{
+  position: relative;
+  bottom: 988px;
+  right: 428px;
+}
+
+.contagem-questoes > p{
+  color: #FFF;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+
+
+#loading{
+  display: none;
+}
+
+.loading-icon-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 18%;
+}
+
+.loading-icon{
+  width: 70%;
+  animation: rotation 2.5s infinite linear;
+}
+
+.isHidden{
+  display: none;
+}
+

@@ -1,0 +1,132 @@
+.menuContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.escolhaTexto{
+  width: 55%;
+}
+
+.cards-biomas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  gap: 15px;
+  margin-left: 100px;
+}
+
+.cards-biomas > div{
+  width: 150px;
+  cursor: pointer;
+}
+
+.eachCard > span{
+  position: relative;
+  bottom: 40px;
+  left: 95px;
+  color: #FFF;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 18px;
+}
+
+#fecharModalParabens{
+  left: 250px;
+}
+#fecharModalParabens > img{
+  width: 50px;
+}
+
+.status-img{
+  display: flex;
+  align-items: center;
+  width: 800px;
+}
+
+#fecharModalStatus{
+  top: 10px;
+  left: 490px;
+}
+
+.qtde-perguntas-status, .qtde-cards-status{
+  font-family: 'Fredoka', sans-serif;
+  position: absolute;
+  font-size: 50px;
+  color: #FFF;
+}
+
+.botao-acessar-dicas{
+  width: 32%;
+  position: absolute;
+  left: 275px;
+  top: 292px;
+  cursor: pointer;
+}
+
+.posicionamento-voce-sabia{
+  position: relative;
+  bottom: 390px;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titulo-saiba-mais > h3{
+  font-family: 'Montserrat', sans-serif;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.conteudo-voce-sabia{
+  font-family: 'Montserrat', sans-serif;
+  color: #FFF;
+  text-align: center;
+  font-size: 17px;
+  margin-top: 15px;
+}
+
+.conteudoVoceSabia{
+  width: 75%;
+}
+
+.next-saibaMais-container{
+  position: fixed;
+  bottom: 180px;
+  left: 558px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.nextSaibaMais-item{
+  width: 25px;
+  height: 25px;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nextSaibaMais-filled{
+  width: 17px;
+  height: 17px;
+  background-color: #FFF;
+  border-radius: 50%;
+}
+
+.filled-inicio{
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border-radius: 50%;
+}
