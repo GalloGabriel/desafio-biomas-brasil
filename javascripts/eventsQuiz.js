@@ -225,10 +225,12 @@ function chamaProximaQuestao(evt){
     if(click < currentQuestoes.length){
       embaralhaQuestao(click);
 
+      /*
       if(click === currentQuestoes.length - 1){
         let contagemContainer = document.querySelector('.contagem-questoes');
         contagemContainer.style.left = '303px';
       }
+      */
 
       //Atualizando o titulo da questao
       tituloQuestao.innerHTML = currentQuestoes[click].titulo;
