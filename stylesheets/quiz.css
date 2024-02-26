@@ -17,7 +17,7 @@
   background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-amaz.svg);
   background-size: 100%;
   background-repeat: no-repeat;
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -177,8 +177,12 @@
 .botao-jogar{
   cursor: pointer;
   position: absolute;
-  bottom: 95px;
   width: 220px;
+}
+
+.botaoJogar{
+  position: relative;
+  top: 215px;
 }
 
 .botao-responder{

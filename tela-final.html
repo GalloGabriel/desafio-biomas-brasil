@@ -37,10 +37,9 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="https://apps.univesp.br/common/rea-geral-2.1.css">
   <!-- <link rel="stylesheet" href="../common/rea-geral-2.1.css">   -->
-  <link rel="stylesheet" href="/stylesheets/nav_footer.css">
-  <link rel="stylesheet" href="/stylesheets/main.css">
-  <link rel="stylesheet" href="/stylesheets/quiz.css">
-  <link rel="stylesheet" href="/stylesheets/bg-caatinga.css">
+  <link rel="stylesheet" href="stylesheets/nav_footer.css">
+  <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href="stylesheets/tela-final.css">
 
 
 <!--[if gte mso 9]><xml>
@@ -96,64 +95,14 @@
   </nav>
 
   <!-- Conteúdo -->
-  <main id="conteudoPrincipalQuiz">
+  <main id="conteudoPrincipal">
 
-    <div class="container" id="teste2">
+    <div class="container">
       <!-- Seu conteúdo -->
 
-      <section class="curiosidadesContainer curiosidadesCaatinga">
-        <img class="curiosidade-box" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-caatinga.svg" alt="">
-        <div class="curiosidade-content">
-          <h3 class="titulo-curiosidades" id="tituloCuriosidadeCaatinga"></h3>
-          <p class="texto-curiosidade"></p>
-        </div>
-    
-        <div class="next-content-container">
-          <div id="nextItem1" class="next-content"></div>
-          <div id="nextItem2" class="next-content"></div>
-          <div id="nextItem3" class="next-content"></div>
-          <div id="nextItem4" class="next-content"></div>
-          <div id="nextItem5" class="next-content"></div>
-          <div id="nextItem6" class="next-content"></div>
-          <div id="nextItem7" class="next-content"></div>
-          <div id="nextItem8" class="next-content"></div>
-        </div>
-        
-        <div class="botao-jogar">
-          <img class="botaoJogar" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_jogar-caatinga.svg" alt="" onclick="showQuiz('curiosidadesCaatinga', 'quizCaatinga')" onmouseover="hoverImages(this, 'bt_jogar-caatinga-over')" onmouseout="tiraHover(this, 'bt_jogar-caatinga')">
-        </div>
-        
-      </section>
-    
-      <section id="quizContainer" class="quizContainer quizCaatinga" style="display: none;">
-        
-    
-        <div class="quiz-content">
-    
-          <p id="tituloQuestao"></p>
-    
-          <div class="alternativas-container" id="alternativasContainer">
-            
-          </div>
-    
-        </div>
-    
-        <div class="botao-responder" style="width: 25%;">
-          <img src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_responder-caatinga.svg" alt="" id="botaoResponder" onmouseover="hoverImages(this, 'bt_responder-caatinga-over')" onmouseout="tiraHover(this, 'bt_responder-caatinga')">
-        </div>
-    
-        <div class="contagem-questoes">
-          <p>
-            <span class="contagem-dinamica"></span><span>/10</span>
-          </p>
-        </div>
-    
-      </section>
-    
-      
-      <section id="loading">
-    
-      </section>
+      <div class="alert alert-info fade show" role="alert" style="display: none;">
+        Você será redirecionado(a) em <span id="timeLeftSpan"></span> segundos.
+      </div>
 
     </div>
   </main>
@@ -296,29 +245,8 @@
     });
   </script>
 
-  <!--DATA -->
-  <script type="text/javascript" src="/data/curiosidades-amazonia.js"></script>
-  <script type="text/javascript" src="/data/quiz-amazonia.js"></script>
-  <script type="text/javascript" src="/data/curiosidades-caatinga.js"></script>
-  <script type="text/javascript" src="/data/quiz-caatinga.js"></script>
-  <script type="text/javascript" src="/data/curiosidades-cerrado.js"></script>
-  <script type="text/javascript" src="/data/quiz-cerrado.js"></script>
-  <script type="text/javascript" src="/data/curiosidades-mataAtlantica.js"></script>
-  <script type="text/javascript" src="/data/quiz-mataAtlantica.js"></script>
-  <script type="text/javascript" src="/data/curiosidades-pampas.js"></script>
-  <script type="text/javascript" src="/data/quiz-pampas.js"></script>
-  <script type="text/javascript" src="/data/curiosidades-pantanal.js"></script>
-  <script type="text/javascript" src="/data/quiz-pantanal.js"></script>
-
-  <!-- CUSTOM JS -->
-  <script type="text/javascript" src="/javascripts/events.js"></script>
-  <script type="text/javascript" src="/javascripts/index.js"></script>
-  <script type="text/javascript" src="/javascripts/hovers.js"></script>
-
-  <!-- COMPONENTES -->
-  <script ype="text/javascript" src="/components/questoes.js"></script>
-
-  <script type="text/javascript" src="/javascripts/eventsQuiz.js"></script>
+  <!-- Custom JS -->
+  <script type="text/javascript" src="javascripts/eventsTelaFinal.js"></script>
 
   <!-- MathJax. Descomente se for utilizar. Caso contrário, remova. -->
   <!-- <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->

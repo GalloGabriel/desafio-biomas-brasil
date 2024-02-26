@@ -98,13 +98,12 @@
 }
 
 .next-saibaMais-container{
-  position: fixed;
-  bottom: 180px;
-  left: 558px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  position: absolute;
+  top: 360px;
 }
 
 .nextSaibaMais-item{

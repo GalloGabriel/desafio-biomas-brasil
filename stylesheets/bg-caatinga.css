@@ -1,0 +1,21 @@
+#conteudoPrincipalQuiz{
+  background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-caatinga.png);
+}
+
+.curiosidadesContainer{
+  background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-caatinga.svg);
+}
+
+.quiz-content{
+  background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q2-caatinga.svg);
+}
+
+.inner-next-content{
+  background-color: #EA7C2C;
+}
+
+.alternativas-item:hover{
+  background-color: #EA7C2C;
+  color: #FFF;
+  border: 2px solid #EA7C2C;
+}

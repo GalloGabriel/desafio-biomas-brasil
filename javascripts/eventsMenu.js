@@ -102,11 +102,13 @@ $('.botao-acessar-dicas').click(function(){
         nextItemsArray.push(nextItem);
 
         nextItemsArray.forEach((item)=>{
+          /*
           if(nextItemsArray.length === 13){
             nextSaibaMaisContainer.style.left = '480px';
           }else if(nextItemsArray.length === 12){
             nextSaibaMaisContainer.style.left = '505px';
           }
+          */
           nextSaibaMaisContainer.appendChild(item);
         });
 

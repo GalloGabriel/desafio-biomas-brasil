@@ -1,0 +1,21 @@
+#conteudoPrincipalQuiz{
+  background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-cerrado.png);
+}
+
+.curiosidadesContainer{
+  background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-cerrado.svg);
+}
+
+.quiz-content{
+  background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q2-cerrado.svg);
+}
+
+.inner-next-content{
+  background-color: #F0B323;
+}
+
+.alternativas-item:hover{
+  background-color: #F0B323;
+  color: #FFF;
+  border: 2px solid #F0B323;
+}

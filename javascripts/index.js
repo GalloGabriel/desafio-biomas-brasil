@@ -79,12 +79,12 @@ $('#botaoAvancar').click(function(){
 })
 
 // Chamando Quiz
-function showQuiz(curiosidadesContainer, quizContainer, loadingElement){
+function showQuiz(curiosidadesContainer, quizContainer){
   let curiosidadesCont = document.querySelector(`.${curiosidadesContainer}`);
   let quizCont = document.querySelector(`.${quizContainer}`)
 
   curiosidadesCont.style.display = 'none';
-  chamaLoading(loadingElement);
+  //chamaLoading(loadingElement);
 
   setTimeout(() => {
     loadingBox.style.display = 'none';

@@ -2,7 +2,14 @@ const tituloCuriosidades = document.querySelector('.titulo-curiosidades');
 const nextContentContainer = document.querySelector('.next-content-container');
 const textoCuriosidade = document.querySelector('.texto-curiosidade');
 const nextContentItem = document.querySelectorAll('.next-content');
+const BASE_URL_IMAGE = "https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/"
 
+let imagesCuriosidades = new Image();
+arraySrcImages = ["tela-amaz.png", ""]
+imagesCuriosidades.src = `${BASE_URL_IMAGE}tela-pampas.png`;
+imagesCuriosidades.onload = function (){
+  $('.curiosidadesContainer').css("display", "flex")
+}
 
 // Definindo qual o caminho da URL atual
 const { pathname } = window.location;

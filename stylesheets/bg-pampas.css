@@ -1,0 +1,21 @@
+#conteudoPrincipalQuiz{
+  background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-pampas.png);
+}
+
+.curiosidadesContainer{
+  background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-pampas.svg);
+}
+
+.quiz-content{
+  background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q2-pampas.svg);
+}
+
+.inner-next-content{
+  background-color: #7E6341;
+}
+
+.alternativas-item:hover{
+  background-color: #7E6341;
+  color: #FFF;
+  border: 2px solid #7E6341;
+}
