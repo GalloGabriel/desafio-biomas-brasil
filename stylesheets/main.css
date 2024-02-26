@@ -238,3 +238,11 @@ body {
 #paginaEmConstrucao{
   display: none;
 }
+
+
+@media (max-height: 1360px) {
+  #conteudoPrincipal{
+    background-size: contain;
+    margin: 0;
+  }
+}
