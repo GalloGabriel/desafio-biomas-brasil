@@ -224,14 +224,15 @@ body {
 }
 
 #btnInfo{
-  position: relative;
-  bottom: 630px;
-  left: -70px;
+  position: absolute;
+  top: 160px;
   margin: 0;
 }
 #btnInfo > img{
-  width: 13%;
+  position: relative;
+  width: 40%;
   cursor: pointer;
+  left: -80px;
 }
 
 #paginaEmConstrucao{
