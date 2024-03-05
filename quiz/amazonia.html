@@ -98,30 +98,74 @@
   <main id="conteudoPrincipalQuiz">
 
     <div class="container" id="teste2">
-      <!-- Seu conteúdo -->
 
       <section class="curiosidadesContainer curiosidadesAmaz" style="display: none;">
-        <img class="curiosidade-box" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-amaz.svg" alt="">
-        <div class="curiosidade-content">
-          <h3 class="titulo-curiosidades" id="tituloCuriosidadeAmazonia"></h3>
-          <p class="texto-curiosidade"></p>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000" data-keyboard="true">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeAmazonia">#1 - Local:</h3>
+                <p class="texto-curiosidade">Abrange principalmente a região Norte do Brasil.</p>
+              </div>
+            </div>
+            <div class="carousel-item"><div class="curiosidade-content">
+              <h3 class="titulo-curiosidades" id="tituloCuriosidadeAmazonia">#2 - Extensão territorial:</h3>
+              <p class="texto-curiosidade">Aproximadamente 49% do território brasileiro.
+              </p>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeAmazonia">#3 - Unidades da Federação:</h3>
+                <p class="texto-curiosidade">Amazonas, Pará, Amapá, Rondônia, Roraima, Acre, Tocantins e partes do Maranhão e Mato Grosso.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeAmazonia">#4 - Fauna e Flora:</h3>
+                <p class="texto-curiosidade">Apresenta uma imensa diversidade de espécies, incluindo a maior biodiversidade do planeta. Possui uma variedade de animais, como a onça-pintada, o boto-cor-de-rosa, o tamanduá-bandeira e a arara-azul.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeAmazonia">#5 - Desafios do Bioma:</h3>
+                <p class="texto-curiosidade">Desmatamento, incêndios florestais, garimpo ilegal, mudanças climáticas e pressões econômicas.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeAmazonia">#6 - Fatos Peculiares:</h3>
+                <p class="texto-curiosidade">A Floresta Amazônica é considerada o "pulmão do mundo" devido à sua grande capacidade de produzir oxigênio e absorver dióxido de carbono.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeAmazonia">#7 - Principais Atividades Econômicas:</h3>
+                <p class="texto-curiosidade">Exploração de madeira, pecuária, agricultura (como a produção de soja) e turismo.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeAmazonia">#8 - Curiosidades Exclusivas:</h3>
+                <p class="texto-curiosidade">A Amazônia abriga o rio Amazonas, o maior rio em volume de água do mundo, e também a maior árvore da região, conhecida como Samaúma.</p>
+              </div>
+            </div>
+          </div>
         </div>
-    
-        <div class="next-content-container">
-          <div id="nextItem1" class="next-content"></div>
-          <div id="nextItem2" class="next-content"></div>
-          <div id="nextItem3" class="next-content"></div>
-          <div id="nextItem4" class="next-content"></div>
-          <div id="nextItem5" class="next-content"></div>
-          <div id="nextItem6" class="next-content"></div>
-          <div id="nextItem7" class="next-content"></div>
-          <div id="nextItem8" class="next-content"></div>
-        </div>
-        
+
         <div class="botao-jogar">
           <img class="botaoJogar" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_jogar-amaz.svg" alt="" onclick="showQuiz('curiosidadesAmaz', 'quizAmaz')" onmouseover="hoverImages(this, 'bt_jogar-amaz-over')" onmouseout="tiraHover(this, 'bt_jogar-amaz')">
         </div>
-        
       </section>
     
       <section id="quizContainer" class="quizContainer quizAmaz" style="display: none;">

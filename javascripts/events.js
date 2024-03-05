@@ -29,6 +29,7 @@ for (let i = 0; i < arrayBiomas.length + 1; i++) {
 
       $('.curiosidadesContainer').css("display", "flex");
       
+      /*
       // Troca automaticamente o conteudo das curiosidades dos biomas
       arrayCuriosidadesBiomas[i].forEach(
         (element, i) => {
@@ -40,15 +41,21 @@ for (let i = 0; i < arrayBiomas.length + 1; i++) {
         }, 5000 * i);
         
       }); 
+      */
       
     }
-
-    
-
     
     
   }
   
 }
 
-
+//Troca info do Carrosel de curiosidades nas setas do teclado
+$(document).bind('keyup', function(e) {
+  if(e.which == 39){
+      $('.carousel').carousel('next');
+  }
+  else if(e.which == 37){
+      $('.carousel').carousel('prev');
+  }
+});

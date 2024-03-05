@@ -102,27 +102,71 @@
       <!-- Seu conteúdo -->
 
       <section class="curiosidadesContainer curiosidadesCaatinga" style="display: none;">
-        <img class="curiosidade-box" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-caatinga.svg" alt="">
-        <div class="curiosidade-content">
-          <h3 class="titulo-curiosidades" id="tituloCuriosidadeCaatinga"></h3>
-          <p class="texto-curiosidade"></p>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCaatinga">#1 - Local:</h3>
+                <p class="texto-curiosidade">Presente principalmente na região Nordeste do Brasil.</p>
+              </div>
+            </div>
+            <div class="carousel-item"><div class="curiosidade-content">
+              <h3 class="titulo-curiosidades" id="tituloCuriosidadeCaatinga">#2 - Extensão territorial:</h3>
+              <p class="texto-curiosidade">Aproximadamente 11% do território brasileiro.</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCaatinga">#3 - Unidades da Federação:</h3>
+                <p class="texto-curiosidade">Alagoas, Bahia, Ceará, Maranhão, Pernambuco, Paraíba, Rio Grande do Norte, Piauí e Sergipe.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCaatinga">#4 - Fauna e Flora:</h3>
+                <p class="texto-curiosidade">Apresenta uma vegetação adaptada à seca, com arbustos, árvores espinhosas e cactos. A fauna inclui animais como o tatu-bola, o gato-do-mato, o mocó e diversas espécies de aves.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCaatinga">#5 - Desafios do Bioma:</h3>
+                <p class="texto-curiosidade">Desertificação, desmatamento, agricultura inadequada, escassez de água e falta de políticas de conservação.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCaatinga">#6 - Fatos Peculiares:</h3>
+                <p class="texto-curiosidade">A Caatinga é o único bioma exclusivamente brasileiro e possui uma adaptação única às condições áridas do semiárido nordestino.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCaatinga">#7 - Principais Atividades Econômicas:</h3>
+                <p class="texto-curiosidade">Agricultura de subsistência, pecuária, extração de lenha e turismo.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCaatinga">#8 - Curiosidades Exclusivas:</h3>
+                <p class="texto-curiosidade">A Caatinga abriga a maior diversidade de abelhas do Brasil e é o lar do cacto mandacaru, símbolo da região.</p>
+              </div>
+            </div>
+          </div>
         </div>
-    
-        <div class="next-content-container">
-          <div id="nextItem1" class="next-content"></div>
-          <div id="nextItem2" class="next-content"></div>
-          <div id="nextItem3" class="next-content"></div>
-          <div id="nextItem4" class="next-content"></div>
-          <div id="nextItem5" class="next-content"></div>
-          <div id="nextItem6" class="next-content"></div>
-          <div id="nextItem7" class="next-content"></div>
-          <div id="nextItem8" class="next-content"></div>
-        </div>
-        
+
         <div class="botao-jogar">
           <img class="botaoJogar" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_jogar-caatinga.svg" alt="" onclick="showQuiz('curiosidadesCaatinga', 'quizCaatinga')" onmouseover="hoverImages(this, 'bt_jogar-caatinga-over')" onmouseout="tiraHover(this, 'bt_jogar-caatinga')">
         </div>
-        
       </section>
     
       <section id="quizContainer" class="quizContainer quizCaatinga" style="display: none;">

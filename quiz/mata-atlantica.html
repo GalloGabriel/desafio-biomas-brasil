@@ -102,27 +102,71 @@
       <!-- Seu conteúdo -->
 
       <section class="curiosidadesContainer curiosidadesMata" style="display: none;">
-        <img class="curiosidade-box" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-mata.svg" alt="">
-        <div class="curiosidade-content">
-          <h3 class="titulo-curiosidades" id="tituloCuriosidadeMata"></h3>
-          <p class="texto-curiosidade"></p>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeMata">#1 - Local:</h3>
+                <p class="texto-curiosidade">Ocorre ao longo do litoral brasileiro, desde o Rio Grande do Norte até o Rio Grande do Sul, com penetração em alguns estados do interior.</p>
+              </div>
+            </div>
+            <div class="carousel-item"><div class="curiosidade-content">
+              <h3 class="titulo-curiosidades" id="tituloCuriosidadeMata">#2 - Extensão territorial:</h3>
+              <p class="texto-curiosidade">Aproximadamente 13% do território brasileiro.</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeMata">#3 - Unidades da Federação:</h3>
+                <p class="texto-curiosidade">Todos os estados litorâneos do Brasil, além de partes de Minas Gerais, Espírito Santo, São Paulo e Paraná.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeMata">#4 - Fauna e Flora:</h3>
+                <p class="texto-curiosidade">Apresenta uma grande diversidade de espécies vegetais e animais. Abriga animais como a jaguatirica, a preguiça-de-coleira, o mico-leão-dourado e uma grande variedade de aves. A vegetação varia desde florestas tropicais densas até campos rupestres.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeMata">#5 - Desafios do Bioma:</h3>
+                <p class="texto-curiosidade">Desmatamento, urbanização desordenada, fragmentação de habitat, caça ilegal e poluição.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeMata">#6 - Fatos Peculiares:</h3>
+                <p class="texto-curiosidade">A Mata Atlântica é um dos biomas mais ameaçados do mundo, mas também é reconhecida por sua importância na conservação da biodiversidade.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeMata">#7 - Principais Atividades Econômicas:</h3>
+                <p class="texto-curiosidade">Turismo, agricultura (principalmente fruticultura), exploração madeireira sustentável e produção de água.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeMata">#8 - Curiosidades Exclusivas:</h3>
+                <p class="texto-curiosidade">O bioma Mata Atlântica abriga o maior primata das Américas, o muriqui, e também é conhecido por possuir a maior diversidade de bromélias do mundo.</p>
+              </div>
+            </div>
+          </div>
         </div>
-    
-        <div class="next-content-container">
-          <div id="nextItem1" class="next-content"></div>
-          <div id="nextItem2" class="next-content"></div>
-          <div id="nextItem3" class="next-content"></div>
-          <div id="nextItem4" class="next-content"></div>
-          <div id="nextItem5" class="next-content"></div>
-          <div id="nextItem6" class="next-content"></div>
-          <div id="nextItem7" class="next-content"></div>
-          <div id="nextItem8" class="next-content"></div>
-        </div>
-        
+
         <div class="botao-jogar">
           <img class="botaoJogar" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_jogar-mata.svg" alt="" onclick="showQuiz('curiosidadesMata', 'quizMata')" onmouseover="hoverImages(this, 'bt_jogar-mata-over')" onmouseout="tiraHover(this, 'bt_jogar-mata')">
         </div>
-        
       </section>
     
       <section id="quizContainer" class="quizContainer quizMata" style="display: none;">

@@ -102,27 +102,71 @@
       <!-- Seu conteúdo -->
 
       <section class="curiosidadesContainer curiosidadesCerrado" style="display: none;">
-        <img class="curiosidade-box" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-cerrado.svg" alt="">
-        <div class="curiosidade-content">
-          <h3 class="titulo-curiosidades" id="tituloCuriosidadeCerrado"></h3>
-          <p class="texto-curiosidade"></p>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCerrado">#1 - Local:</h3>
+                <p class="texto-curiosidade">Está localizado na região centro-oeste do Brasil, nos estados do Mato Grosso e Mato Grosso do Sul.</p>
+              </div>
+            </div>
+            <div class="carousel-item"><div class="curiosidade-content">
+              <h3 class="titulo-curiosidades" id="tituloCuriosidadeCerrado">#2 - Extensão territorial:</h3>
+              <p class="texto-curiosidade">Aproximadamente 2% do território brasileiro.</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCerrado">#3 - Unidades da Federação:</h3>
+                <p class="texto-curiosidade">Mato Grosso e Mato Grosso do Sul.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCerrado">#4 - Fauna e Flora:</h3>
+                <p class="texto-curiosidade">É um bioma de savana inundável, abrigando uma grande diversidade de animais, como a onça-pintada, a arara-azul, o jacaré-do-pantanal e a capivara. A vegetação é composta por gramíneas, árvores e arbustos adaptados às variações de inundação.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCerrado">#5 - Desafios do Bioma:</h3>
+                <p class="texto-curiosidade">Desmatamento, queimadas, expansão agrícola, pecuária intensiva e alterações no regime de inundação.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCerrado">#6 - Fatos Peculiares:</h3>
+                <p class="texto-curiosidade">O Pantanal é a maior área úmida continental do planeta, conhecida por sua rica biodiversidade e por abrigar uma grande variedade de espécies aquáticas.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCerrado">#7 - Principais Atividades Econômicas:</h3>
+                <p class="texto-curiosidade">Pecuária extensiva, turismo de natureza, pesca e extrativismo de recursos naturais.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadeCerrado">#8 - Curiosidades Exclusivas:</h3>
+                <p class="texto-curiosidade">O Pantanal é famoso por suas impressionantes cheias sazonais, que transformam a paisagem e atraem uma grande quantidade de aves migratórias, além de ser um importante berçário para peixes da região.</p>
+              </div>
+            </div>
+          </div>
         </div>
-    
-        <div class="next-content-container">
-          <div id="nextItem1" class="next-content"></div>
-          <div id="nextItem2" class="next-content"></div>
-          <div id="nextItem3" class="next-content"></div>
-          <div id="nextItem4" class="next-content"></div>
-          <div id="nextItem5" class="next-content"></div>
-          <div id="nextItem6" class="next-content"></div>
-          <div id="nextItem7" class="next-content"></div>
-          <div id="nextItem8" class="next-content"></div>
-        </div>
-        
+
         <div class="botao-jogar">
           <img class="botaoJogar" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_jogar-cerrado.svg" alt="" onclick="showQuiz('curiosidadesCerrado', 'quizCerrado')" onmouseover="hoverImages(this, 'bt_jogar-cerrado-over')" onmouseout="tiraHover(this, 'bt_jogar-cerrado')">
         </div>
-        
       </section>
     
       <section id="quizContainer" class="quizContainer quizCerrado" style="display: none;">

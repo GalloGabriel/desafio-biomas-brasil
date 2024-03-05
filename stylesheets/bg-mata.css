@@ -19,3 +19,7 @@
   color: #FFF;
   border: 2px solid #99425f;
 }
+
+.carousel-indicators .active{
+  background-color: #99425f;
+}

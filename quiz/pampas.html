@@ -102,27 +102,71 @@
       <!-- Seu conteúdo -->
 
       <section class="curiosidadesContainer curiosidadesPampas" style="display: none;">
-        <img class="curiosidade-box" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-pampas.svg" alt="">
-        <div class="curiosidade-content">
-          <h3 class="titulo-curiosidades" id="tituloCuriosidadePampas"></h3>
-          <p class="texto-curiosidade"></p>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePampas">#1 - Local:</h3>
+                <p class="texto-curiosidade">Ocorre principalmente no estado do Rio Grande do Sul e partes de Santa Catarina.</p>
+              </div>
+            </div>
+            <div class="carousel-item"><div class="curiosidade-content">
+              <h3 class="titulo-curiosidades" id="tituloCuriosidadePampas">#2 - Extensão territorial:</h3>
+              <p class="texto-curiosidade">Cerca de 2% do território brasileiro.</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePampas">#3 - Unidades da Federação:</h3>
+                <p class="texto-curiosidade">Rio Grande do Sul e Santa Catarina.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePampas">#4 - Fauna e Flora:</h3>
+                <p class="texto-curiosidade">Caracterizado por campos com gramíneas, arbustos e algumas árvores. Abriga animais como o veado-campeiro, o quero-quero, o cavalo crioulo e aves migratórias.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePampas">#5 - Desafios do Bioma:</h3>
+                <p class="texto-curiosidade">Conversão para agricultura, avanço da pecuária, fragmentação de habitat e alterações no regime de incêndios naturais.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePampas">#6 - Fatos Peculiares:</h3>
+                <p class="texto-curiosidade">Os Pampas são um ecossistema característico das regiões temperadas, sendo exclusivo do Brasil na América do Sul.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePampas">#7 - Principais Atividades Econômicas:</h3>
+                <p class="texto-curiosidade">Pecuária extensiva, agricultura de grãos (principalmente arroz e trigo) e turismo rural.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePampas">#8 - Curiosidades Exclusivas:</h3>
+                <p class="texto-curiosidade">Os Pampas são conhecidos por serem o berço do cavalo crioulo, uma raça equina símbolo da região, e também abrigam a maior colônia de leões-marinhos da América do Sul.</p>
+              </div>
+            </div>
+          </div>
         </div>
-    
-        <div class="next-content-container">
-          <div id="nextItem1" class="next-content"></div>
-          <div id="nextItem2" class="next-content"></div>
-          <div id="nextItem3" class="next-content"></div>
-          <div id="nextItem4" class="next-content"></div>
-          <div id="nextItem5" class="next-content"></div>
-          <div id="nextItem6" class="next-content"></div>
-          <div id="nextItem7" class="next-content"></div>
-          <div id="nextItem8" class="next-content"></div>
-        </div>
-        
+
         <div class="botao-jogar">
           <img class="botaoJogar" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_jogar-pampas.svg" alt="" onclick="showQuiz('curiosidadesPampas', 'quizPampas')" onmouseover="hoverImages(this, 'bt_jogar-pampas-over')" onmouseout="tiraHover(this, 'bt_jogar-pampas')">
         </div>
-        
       </section>
     
       <section id="quizContainer" class="quizContainer quizPampas" style="display: none;">

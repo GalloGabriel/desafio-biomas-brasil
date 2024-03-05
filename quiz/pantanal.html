@@ -101,28 +101,72 @@
     <div class="container" id="teste2">
       <!-- Seu conteúdo -->
 
-      <section class="curiosidadesContainer curiosidadesPantanal" style="display: none;"> 
-        <img class="curiosidade-box" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-amaz.svg" alt="">
-        <div class="curiosidade-content">
-          <h3 class="titulo-curiosidades" id="tituloCuriosidadePantanal"></h3>
-          <p class="texto-curiosidade"></p>
+      <section class="curiosidadesContainer curiosidadesPantanal" style="display: none;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePantanal">#1 - Local:</h3>
+                <p class="texto-curiosidade">Presente no centro-oeste e partes do norte e nordeste do Brasil.</p>
+              </div>
+            </div>
+            <div class="carousel-item"><div class="curiosidade-content">
+              <h3 class="titulo-curiosidades" id="tituloCuriosidadePantanal">#2 - Extensão territorial:</h3>
+              <p class="texto-curiosidade">Aproximadamente 23% do território brasileiro.</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePantanal">#3 - Unidades da Federação:</h3>
+                <p class="texto-curiosidade">Distrito Federal, Goiás, Mato Grosso, Mato Grosso do Sul, Tocantins, Bahia, Minas Gerais, Maranhão, Piauí, São Paulo e Paraná.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePantanal">#4 - Fauna e Flora:</h3>
+                <p class="texto-curiosidade">Possui uma rica biodiversidade, incluindo animais como a onça-pintada, o lobo-guará, o tamanduá-bandeira e diversas espécies de aves. A vegetação é composta por árvores baixas, arbustos, gramíneas e algumas árvores de grande porte.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePantanal">#5 - Desafios do Bioma:</h3>
+                <p class="texto-curiosidade">Desmatamento, expansão agrícola, incêndios, pecuária intensiva e urbanização desordenada.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePantanal">#6 - Fatos Peculiares:</h3>
+                <p class="texto-curiosidade">O Cerrado é considerado a savana mais rica em biodiversidade do mundo. Abriga diversas nascentes de importantes bacias hidrográficas do Brasil.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePantanal">#7 - Principais Atividades Econômicas:</h3>
+                <p class="texto-curiosidade">Agricultura (produção de grãos, como soja e milho), pecuária, mineração e turismo.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="curiosidade-content">
+                <h3 class="titulo-curiosidades" id="tituloCuriosidadePantanal">#8 - Curiosidades Exclusivas:</h3>
+                <p class="texto-curiosidade">O Cerrado apresenta uma grande variedade de plantas com propriedades medicinais e é o lar do maior número de espécies de araras do mundo.</p>
+              </div>
+            </div>
+          </div>
         </div>
-    
-        <div class="next-content-container">
-          <div id="nextItem1" class="next-content"></div>
-          <div id="nextItem2" class="next-content"></div>
-          <div id="nextItem3" class="next-content"></div>
-          <div id="nextItem4" class="next-content"></div>
-          <div id="nextItem5" class="next-content"></div>
-          <div id="nextItem6" class="next-content"></div>
-          <div id="nextItem7" class="next-content"></div>
-          <div id="nextItem8" class="next-content"></div>
-        </div>
-        
+
         <div class="botao-jogar">
           <img class="botaoJogar" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_jogar-pantanal.svg" alt="" onclick="showQuiz('curiosidadesPantanal', 'quizPantanal')" onmouseover="hoverImages(this, 'bt_jogar-pantanal-over')" onmouseout="tiraHover(this, 'bt_jogar-pantanal')">
         </div>
-        
       </section>
     
       <section id="quizContainer" class="quizContainer quizPantanal" style="display: none;">

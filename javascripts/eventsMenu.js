@@ -13,6 +13,7 @@ const disabledCard = `pointer-events: none; cursor: not-allowed;`;
 
 // Define array que irá conter as qtdes de questoes corretas de cada bloco
 let arrQtdeQuestoesCorretas = [];
+let cardsCompletos = 0;
 
 for (let i = 1; i < 6 + 1; i++) {
   let getQtdeQuestoesCertas;
@@ -40,9 +41,11 @@ let arrSrcImages = [ 'c2-amaz', 'c2-pantanal', 'c2-cerrado', 'c2-caatinga', 'c2-
 
 let somaPontuacao = arrQtdeQuestoesCorretas.reduce((a,b) => a + b, 0);
 
-localStorage.setItem('status1', false);
-localStorage.setItem('status2', false);
-localStorage.setItem('status3', false);
+for (let i = 0; i < arrQtdeQuestoesCorretas.length; i++) {
+  if(arrQtdeQuestoesCorretas[i] === 10){
+    cardsCompletos++;
+  }
+}
 
 
 for (let i = 0; i < 6; i++){
@@ -64,9 +67,30 @@ for (let i = 0; i < 6; i++){
 }
 
 let arrPontuacoesPossiveis = [20, 40, 60];
-let arrCardsStatus = [2,4,6];
+
+console.log(somaPontuacao)
 
 
+for (let i = 0; i < arrPontuacoesPossiveis.length; i++) {
+  if(!localStorage.getItem(`status${i+1}`)){
+    localStorage.setItem(`status${i+1}`, false)
+  }
+}
+
+
+
+for (let i = 0; i < arrPontuacoesPossiveis.length; i++) {
+  if(somaPontuacao >= arrPontuacoesPossiveis[i] && localStorage.getItem(`status${i+1}`) !== 'true'){
+    statusImage.innerHTML = `<img src="${BASE_IMG_URL}/status${i+1}.svg" alt="">`;
+    contentQtdePerguntasStatus.innerHTML = `${somaPontuacao}/60`;
+    contentQtdeCardsStatus.innerHTML = `${cardsCompletos}/6`;
+    localStorage.setItem(`status${i+1}`, true);
+    $('#modalStatus').modal('toggle');
+  }
+}
+
+
+/*
 $('#modalParabens').on('hide.bs.modal', function(e){
 
   for (let i = 0; i < arrPontuacoesPossiveis.length; i++) {
@@ -80,6 +104,7 @@ $('#modalParabens').on('hide.bs.modal', function(e){
   }
   
 });
+*/
 
 
 /* SAIBA MAIS  */

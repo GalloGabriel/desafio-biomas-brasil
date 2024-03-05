@@ -25,9 +25,6 @@ for (let i = 1; i < arrayBiomasGabarito.length + 1; i++) {
   }
 }
 
-console.log(currentQuestoes);
-console.log(nameBiomaGabarito);
-
 const getQtdeQuestoesCertas = localStorage.getItem(`questoesCorretasBioma${currentQuestoes}`);
 let qtdeQuestoesCorretas = JSON.parse(getQtdeQuestoesCertas);
 let questoesCorretas = JSON.stringify(qtdeQuestoesCorretas);
@@ -59,8 +56,6 @@ modifiedQuestoesStorage.map((item)=>{
     arrIcones.push(itemsObject)
   }
 })
-
-console.log(arrIcones)
 
 
 // Renderizando informações do gabarito de acordo com os acertos ou erros do usuário

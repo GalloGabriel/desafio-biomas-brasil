@@ -57,7 +57,7 @@ questoesStorage.map((item)=>{
 });
 
 
-
+// Printa na tela apenas a 1ª questão não feita ou errada.
 tituloQuestao.innerHTML = currentQuestoes[0].titulo;
 contagemDinamica.innerHTML = currentQuestoes[0].questaoId;
 
@@ -68,7 +68,7 @@ currentQuestoes[0].alternativas.sort((a,b) => a.ordem - b.ordem).map((alternativ
 
   numAlternativa++
 
-  let alternativasContent = criaAlternativas(alternativas.questaoCorreta, currentQuestoes[0].numeros[numAlternativa - 1].alternativaId, currentQuestoes[0].numeros[numAlternativa - 1].alternativaId, alternativas.questaoText)
+  let alternativasContent = criaAlternativas(alternativas.questaoCorreta, currentQuestoes[0].numeros[numAlternativa - 1].alternativaId, currentQuestoes[0].numeros[numAlternativa - 1].alternativaId, alternativas.questaoText, alternativas.questaoCorreta);
 
   alternativasContainer.appendChild(alternativasContent)
 
@@ -125,6 +125,32 @@ for (let i = 0; i < arrChecked.length; i++) {
     }
   })    
 }
+
+
+//Verifica se usuário já acertou a questão atual.
+if(currentQuestoes[0].questaoFeitaCorreta === 'true'){
+  arrChecked.map((item)=>{
+    if(item.value === 'true'){
+      item.checked = true;
+    }
+  })
+
+  arrDivQuestao.map((item)=>{
+    item.style.pointerEvents = 'none';
+
+    if(item.dataset.label === 'true'){
+      item.style = styleAlternativaSelecionada;
+      item.style.pointerEvents = 'none';
+    }
+  })
+}else if(currentQuestoes[0].questaoFeitaCorreta === 'false'){
+  arrDivQuestao.map((item)=>{
+    item.style.pointerEvents = 'auto';
+    item.style = styleAlternativasNaoSelecionadas;
+  });
+}
+
+
 
 let arrayModifiedQuestoes = [];
 
@@ -221,16 +247,8 @@ function chamaProximaQuestao(evt){
 
 
     //Chama a proxima questão até os objetos acabarem
-    console.log(currentQuestoes.length)
     if(click < currentQuestoes.length){
       embaralhaQuestao(click);
-
-      /*
-      if(click === currentQuestoes.length - 1){
-        let contagemContainer = document.querySelector('.contagem-questoes');
-        contagemContainer.style.left = '303px';
-      }
-      */
 
       //Atualizando o titulo da questao
       tituloQuestao.innerHTML = currentQuestoes[click].titulo;
@@ -241,9 +259,37 @@ function chamaProximaQuestao(evt){
         textoLabel[i].innerHTML = currentQuestoes[click].alternativas[i].questaoText;
         contagemDinamica.innerHTML = currentQuestoes[click].questaoId;
         radioButtons[i].value = currentQuestoes[click].alternativas[i].questaoCorreta;
-        
+        arrDivQuestao[i].dataset.label = currentQuestoes[click].alternativas[i].questaoCorreta;
+      }
+
+      
+      //Verifica se usuário já acertou a questão atual. Se sim, seta checked do input para true e coloca estilo disabled nas alternativas
+      if(currentQuestoes[click].questaoFeitaCorreta === 'true'){
+        arrChecked.map((item)=>{
+          if(item.value === 'true'){
+            item.checked = true;
+          }
+        })
+
+        arrDivQuestao.map((item)=>{
+          item.style.pointerEvents = 'none';
+
+          if(item.dataset.label === 'true'){
+            item.style = styleAlternativaSelecionada;
+            item.style.pointerEvents = 'none';
+          }
+        })
+      }else if(currentQuestoes[click].questaoFeitaCorreta === 'false'){
+        arrDivQuestao.map((item)=>{
+          item.style.pointerEvents = 'auto';
+          item.style = styleAlternativasNaoSelecionadas;
+        });
       }
     }
+
+
+    
+
 
     // Quando objetos acabarem
     if(click === currentQuestoes.length){

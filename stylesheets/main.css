@@ -243,6 +243,25 @@ body {
   display: none;
 }
 
+.carousel-indicators{
+  bottom: -80px;
+  gap: 20px;
+}
+
+.carousel-indicators .active{
+  background-color: #014421;
+}
+
+.carousel-indicators >  li{
+  background-color: transparent;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 1px solid black;
+  opacity: 1;
+  padding: 2px;
+}
+
 
 @media (max-height: 1360px) {
   #conteudoPrincipal{
