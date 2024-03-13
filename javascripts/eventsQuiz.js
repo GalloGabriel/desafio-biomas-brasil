@@ -151,6 +151,16 @@ if(currentQuestoes[0].questaoFeitaCorreta === 'true'){
 }
 
 
+//Define no localStorage cardsFinalizados
+for (let i = 0; i < 6; i++) {
+
+  if(!localStorage.getItem(`cardFeito${i+1}`)){
+    localStorage.setItem(`cardFeito${i+1}`, 0);
+  }
+  
+}
+
+
 
 let arrayModifiedQuestoes = [];
 
@@ -296,6 +306,12 @@ function chamaProximaQuestao(evt){
       localStorage.setItem(`questoesCorretasBioma${currentBloco}`, questoesCorretas);
       localStorage.setItem(`modifiedQuestoesBioma${currentBloco}`, JSON.stringify(arrayModifiedQuestoes));
       localStorage.setItem('currentBloco', currentBloco);
+      
+      //Atualiza cardFeito no localStorage
+      if(localStorage.getItem(`cardFeito${currentBloco}`) === "0"){
+        localStorage.setItem(`cardFeito${currentBloco}`, 1)
+      }
+
       /*window.location.href = 'http://127.0.0.1:5501/gabarito.html';*/
       window.location.href = 'http://127.0.0.1:5500/gabarito.html'
     }

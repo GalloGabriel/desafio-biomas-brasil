@@ -10,10 +10,15 @@ const voceSabiaConteudo = document.querySelector('.conteudo-voce-sabia');
 const nextSaibaMaisContainer = document.querySelector('.next-saibaMais-container');
 const BASE_IMG_URL = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets';
 const disabledCard = `pointer-events: none; cursor: not-allowed;`;
+const pontosConquistadosResumo = document.querySelector('#pontosConquistadosResumo');
+const cardsConcluidosResumo = document.querySelector('#cardsConcluidosResumo');
 
 // Define array que irá conter as qtdes de questoes corretas de cada bloco
 let arrQtdeQuestoesCorretas = [];
 let cardsCompletos = 0;
+
+//Define array que irá conter a qtde de Cards Feitos
+let arrCardsFeitos = [];
 
 for (let i = 1; i < 6 + 1; i++) {
   let getQtdeQuestoesCertas;
@@ -32,6 +37,10 @@ for (let i = 1; i < 6 + 1; i++) {
   if(!localStorage.getItem(`parabens${i}`)){
     localStorage.setItem(`parabens${i}`, false)
   }
+
+  let getCardsFeitos = localStorage.getItem(`cardFeito${i}`);
+  let qtdeCardsFeitos = parseInt(getCardsFeitos);
+  arrCardsFeitos.push(qtdeCardsFeitos);
 }
 
 let arrPontuacaoMenu = Array.from(pontuacaoMenu);
@@ -41,10 +50,71 @@ let arrSrcImages = [ 'c2-amaz', 'c2-pantanal', 'c2-cerrado', 'c2-caatinga', 'c2-
 
 let somaPontuacao = arrQtdeQuestoesCorretas.reduce((a,b) => a + b, 0);
 
+let somaCardsFeitos = arrCardsFeitos.reduce((a,b) => a + b, 0);
+
+console.log(somaCardsFeitos)
+
+/* Atualiza cards completos */
 for (let i = 0; i < arrQtdeQuestoesCorretas.length; i++) {
   if(arrQtdeQuestoesCorretas[i] === 10){
     cardsCompletos++;
   }
+}
+
+
+console.log(cardsCompletos)
+
+let arrQtdeTotalQuestoes = [quizAmazonia.length, quizCaatinga.length, quizCerrado.length, quizMataAtlantica.length, quizPampas.length, quizPantanal.length];
+
+let qtdeTotalQuestoes = arrQtdeTotalQuestoes.reduce((a,b) => a + b, 0)
+
+if(!localStorage.getItem('resumo')){
+  localStorage.setItem('resumo', false)
+}
+
+/* Trigger Modal de Resumo */
+if(somaCardsFeitos === 6 && somaPontuacao < qtdeTotalQuestoes && localStorage.getItem('resumo') !== 'true'){
+  pontosConquistadosResumo.innerHTML = somaPontuacao;
+  cardsConcluidosResumo.innerHTML = cardsCompletos;
+
+  setTimeout(()=>{
+
+    if( $('#modalStatus').hasClass("show") ){
+      $('#modalStatus').on('hide.bs.modal', function(e){
+        $('#modalResumo').modal('toggle');
+      });
+    }
+
+    else if( $('#modalParabens').hasClass("show") ){
+
+      $('#modalParabens').on('hide.bs.modal', function(e){
+
+        setTimeout(()=>{
+          if($('#modalStatus').hasClass("show")){
+
+            $('#modalStatus').on('hide.bs.modal', function(e){
+  
+              $('#modalResumo').modal('toggle');
+  
+            });
+  
+          }else{
+            $('#modalResumo').modal('toggle');
+          }
+        }, 300)
+        
+      })
+
+    }
+
+    else{
+      $('#modalResumo').modal('toggle');
+    }
+    
+  }, 500);
+
+  localStorage.setItem('resumo', true);
+  
 }
 
 
@@ -85,7 +155,16 @@ for (let i = 0; i < arrPontuacoesPossiveis.length; i++) {
     contentQtdePerguntasStatus.innerHTML = `${somaPontuacao}/60`;
     contentQtdeCardsStatus.innerHTML = `${cardsCompletos}/6`;
     localStorage.setItem(`status${i+1}`, true);
-    $('#modalStatus').modal('toggle');
+
+    setTimeout(()=>{
+      if( $('#modalParabens').hasClass("show") ){
+        $('#modalParabens').on('hide.bs.modal', function(e){
+          $('#modalStatus').modal('toggle');
+        })
+      }else{
+        $('#modalStatus').modal('toggle');
+      }
+    }, 300)
   }
 }
 
@@ -108,6 +187,8 @@ $('#modalParabens').on('hide.bs.modal', function(e){
 
 
 /* SAIBA MAIS  */
+
+localStorage.setItem('saibaMais', false);
 
 let arraySaibaMais = [ saibaMaisTerra, saibaMaisOxigenio, saibaMaisAgua ];
 let nextItemsArray = [];
@@ -163,7 +244,7 @@ $('.botao-acessar-dicas').click(function(){
 
 //Verifica pontuação para ir para Tela Final
 $('#modalStatus').on('hide.bs.modal', function(e){
-  if(somaPontuacao === 60 && localStorage.getItem('saibaMais') === 'false'){
+  if(somaPontuacao === qtdeTotalQuestoes && localStorage.getItem('saibaMais') === 'false'){
     setTimeout(()=>{
       /*window.location.href = 'http://127.0.0.1:5501/tela-final.html';*/
       window.location.href = 'http://127.0.0.1:5500/tela-final.html'
@@ -174,7 +255,7 @@ $('#modalStatus').on('hide.bs.modal', function(e){
 
 $('#modalSaibaMais').on('hide.bs.modal', function(e){
   localStorage.setItem('saibaMais', false)
-  if(somaPontuacao === 60){
+  if(somaPontuacao === qtdeTotalQuestoes){
     setTimeout(()=>{
       /*window.location.href = 'http://127.0.0.1:5501/tela-final.html';*/
       window.location.href = 'http://127.0.0.1:5500/tela-final.html'

@@ -11,7 +11,9 @@ let arraySrcImages = ["tela-amaz.png", "tela-pantanal.png", "tela-cerrado.png", 
 const { pathname } = window.location;
 
 let arrayBiomas = [ 'amazonia', 'pantanal', 'cerrado', 'caatinga', 'mata-atlantica', 'pampas' ];
+/*
 let arrayCuriosidadesBiomas = [ curiosidadesAmazonia, curiosidadesPantanal, curiosidadesCerrado, curiosidadesCaatinga, curiosidadesMataAtlantica, curiosidadesPampas ];
+*/
 
 for (let i = 0; i < arrayBiomas.length + 1; i++) {
   
