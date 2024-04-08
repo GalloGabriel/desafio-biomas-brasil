@@ -30,7 +30,7 @@ creditosBody.innerHTML = `
 let creditosFooter = document.createElement("div");
 creditosFooter.classList.add("modal-footer");
 creditosFooter.innerHTML = `
-  <p>Março/2024</p>
+  <p>Abril/2024</p>
   <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 `;
 

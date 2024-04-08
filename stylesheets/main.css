@@ -1,15 +1,23 @@
 body {
-  background-color: #DFE6E8;
+  background-color: #5be0c6;
 }
 
-#conteudoPrincipal{
+.brinquedoteca{
+  width: 25%;
+  margin: 0 auto;
+  background-image: url(https://apps.univesp.br/brinquedoteca/_common/assets/brinquedoteca-logo-frame.svg);
+  padding: 2% 4% .5%;
+  margin-bottom: -4px;
+}
+
+.container-conteudo{
   /*https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-sistema.svg*/
   background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-sistema.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50%;
-  background-color: #F5F0F0;
-  height: 780px;
+  background-color: #f5f0f0;
+  height: 645px;
 }
 
 .pagina-inicial-container{
@@ -22,14 +30,14 @@ body {
 
 
 .logo-image{
-  width: 55%;
+  width: 50%;
   margin-top: 70px;
 }
 
 
 
 .iniciar-btn{
-  width: 23%;
+  width: 20%;
   margin-right: 90px;
   margin-top: 35px;
   cursor: pointer;
@@ -46,20 +54,22 @@ body {
 }
 
 #mapaInterativo > div:nth-of-type(1){
-  width: 25%;
+  width: 20%;
   display: flex;
   align-items: flex-end;
   margin-bottom: 150px;
+  position: relative;
+  left: 70px;
 }
 
 #mapaInterativo > div:nth-of-type(2){
   position: relative;
-  width: 50%;
+  width: 45%;
   margin-top: 50px;
 }
 
 #mapaInterativo > div:nth-of-type(3){
-  width: 30%;
+  width: 27%;
   display: flex;
   align-items: flex-end;
   margin-bottom: 150px;
@@ -225,14 +235,14 @@ body {
 
 #btnInfo{
   position: absolute;
-  top: 160px;
+  top: 265px;
   margin: 0;
 }
 #btnInfo > img{
   position: relative;
   width: 40%;
   cursor: pointer;
-  left: -80px;
+  left: 30px;
 }
 
 #creditos .modal-footer{
@@ -244,7 +254,7 @@ body {
 }
 
 .carousel-indicators{
-  bottom: -80px;
+ bottom: -80px;
   gap: 20px;
 }
 
@@ -260,6 +270,30 @@ body {
   border: 1px solid black;
   opacity: 1;
   padding: 2px;
+}
+
+.fundo {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.moldura {
+  flex-grow: 1;
+  height: 100%;
+  background-size: auto;
+  background-repeat: repeat;
+}
+.moldura:first-child {
+  background-image: url('https://apps.univesp.br/brinquedoteca/_common/assets/unity-tile-esq.png');
+  background-position: right;
+}
+.moldura:last-child {
+  background-image: url('https://apps.univesp.br/brinquedoteca/_common/assets/unity-tile-dir.png');
+  background-position: left;
 }
 
 

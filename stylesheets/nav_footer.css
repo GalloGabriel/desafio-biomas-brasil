@@ -15,7 +15,15 @@ nav .nav-link:focus,
 nav .nav-link:hover,
 nav .nav-link[aria-expanded="true"] {}
 
+nav .logo img, nav .nav-link{
+  background-color: #5be0c6;
+}
+
 /* FOOTER */
+
+footer{
+  background-color: #5be0c6;
+}
 /* Cores de fonte + contornos */
 /* footer, footer .sharing i {
   color: red;
@@ -43,7 +51,7 @@ footer .aval-rea .btn-secondary:focus {}
 
 /* MAIN */
 main {
-  padding-top: 3rem;
+  
   padding-bottom: 3rem;
 }
 @media only screen and (max-width: 992px) {
