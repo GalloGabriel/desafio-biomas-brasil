@@ -330,3 +330,18 @@ botaoAvancar.addEventListener('click', chamaProximaQuestao);
 function embaralhaQuestao(n){
   currentQuestoes[n].alternativas.sort((a,b) => a.ordem - b.ordem);
 }
+
+
+/*
+divAlternativa.forEach((e => {
+  e.addEventListener("mouseenter", function(){
+    e.style = styleAlternativaSelecionada;
+  });
+  
+  e.addEventListener("mouseleave", function(){
+    e.style = styleAlternativasNaoSelecionadas;
+  })
+  
+  
+}))
+*/
