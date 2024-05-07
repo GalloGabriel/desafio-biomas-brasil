@@ -63,6 +63,7 @@ if(getPrimeiroAcesso === 'true'){
 }else if(getPrimeiroAcesso === 'false'){
   $('#botaoInicio1').css('display', 'none');
   $('#btnInfo').css('display', 'flex');
+  $('#btnConfig').css('display', 'flex');
 }
 
 

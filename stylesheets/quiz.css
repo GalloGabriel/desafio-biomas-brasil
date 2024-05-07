@@ -17,14 +17,14 @@
   background-size: contain;
   background-position: 50%;
   background-color: #5be0c6;
+  position: relative;
   height: 690px;
 }
 
 #teste2{
-  
   display: flex;
   align-items: center;
-  max-width: 1500px;
+  min-width: 1230px;
 }
 
 .curiosidadesContainer{
@@ -101,6 +101,7 @@
   justify-content: center;
   margin: 70px auto 0 auto;
   position: relative;
+  top: -630px;
 }
 
 .alternativas-container{
@@ -206,8 +207,9 @@
 
 .contagem-questoes{
   position: absolute;
-  left: -13px;
+  /* left: 214px; */
   top: 0px;
+  margin-right: 795px;
   /*background-color: green;*/
   color: black;
   width: 100px;

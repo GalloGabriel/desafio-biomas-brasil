@@ -4,6 +4,8 @@
 
 .curiosidadesContainer{
   background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-cerrado.svg);
+  position: relative;
+    top: -657px;
 }
 
 .quiz-content{
