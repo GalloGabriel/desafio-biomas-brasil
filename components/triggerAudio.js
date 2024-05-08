@@ -1,14 +1,6 @@
 let triggerAudioContainer = document.querySelector("#triggerAudio");
 
 triggerAudioContainer.innerHTML = `
-  <img onmouseover="hoverImages(this, 'btn-menu_som')" 
-  onmouseout="tiraHover(this, 'btn-menu_som')" 
-  src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_som.svg" 
-  alt="" 
-  class="btnConfig-som" 
-  data-toggle="modal" 
-  data-target="#exampleModal">
-
   <!-- Modal Som-->
   <div class="modal fade modelSom" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
