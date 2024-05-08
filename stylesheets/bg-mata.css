@@ -23,3 +23,7 @@
 .carousel-indicators .active{
   background-color: #99425f;
 }
+
+#quizContainer{
+  top: 15px;
+}
