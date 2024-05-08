@@ -178,6 +178,30 @@ body {
   align-items: center;
 }
 
+.btnReiniciar{
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.btnReiniciarJogo{
+  width: 400px;
+  position: relative;
+}
+
+.btnSimNao{
+  margin-top: 20px;
+  display: flex;    
+  width: 89%;
+  margin-left: 46px;
+  justify-content: space-between;
+}
+
+.btnReiniciar-width{
+  width: 150px;  
+}
+
 .info-comoJogar-img{
   width: 900px;
 }
