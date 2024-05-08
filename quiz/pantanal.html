@@ -182,118 +182,79 @@
         </div>
       </section>
 
+     <!-- Button trigger modal som -->
+     <section class="pagina-inicial-container">
+      <img onmouseover="hoverImages(this, 'btn-menu_som')" 
+      onmouseout="tiraHover(this, 'btn-menu_som')" 
+      src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_som.svg" 
+      alt="" 
+      class="btnConfig-som" 
+      data-toggle="modal" 
+      data-target="#exampleModal">
 
-      <!-- Button trigger modal som -->
-      <section class="pagina-inicial-container">
-        <img onmouseover="hoverImages(this, 'btn-menu_som')" 
-        onmouseout="tiraHover(this, 'btn-menu_som')" 
-        src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_som.svg" 
-        alt="" 
-        class="btnConfig-som" 
-        data-toggle="modal" 
-        data-target="#exampleModal"></div>
-              
-
-
-        <!-- Modal Som-->
-        <div class="modal fade modelSom" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-
-      <!-- ================================================================================================================================================== -->
-      <div class="modal-content" id="modalContent1">
-        <img
-        src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/ajustes_1.svg" 
-        alt="" 
-        data-toggle="modal" 
-        data-target="#exampleModal"
-        class="config-som-img">
-        
-        <div class="icone-fechar margin-img-close">
-            <img 
-            onmouseover="hoverImages(this, 'bt_x1')" 
-            onmouseout="tiraHover(this, 'bt_x1')"
-            src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_x1.svg" 
-            alt="" 
-            data-dismiss="modal">
-        </div>
-
-        <div class="progressBar-content">
-          <input type="range" class="form-range" id="barraVolume" min="0" max="1" step="0.01" value=".1" oninput ="ajustarVolume(this.value), ajustarProgresso(this.value)">
-          
-          <div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-            <div id="barraDeProgresso" class="progress-bar-animated progress-bar-striped bg-warning" style="width: 100%"></div>
-          </div>
-        </div>
-        
-      </div>
-
-      <!-- ==================================================================================================================================================== -->
+      <!-- Modal Som-->
+      <div class="modal fade modelSom" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-content" id="modalContent1">
+              <img
+              src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/ajustes_1.svg" 
+              alt="" 
+              data-toggle="modal" 
+              data-target="#exampleModal"
+              class="config-som-img">                  
+                <div class="icone-fechar margin-img-close">
+                    <img 
+                    onmouseover="hoverImages(this, 'bt_x1')" 
+                    onmouseout="tiraHover(this, 'bt_x1')"
+                    src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_x1.svg" 
+                    alt="" 
+                    data-dismiss="modal">
+                </div>
+                <div class="progressBar-content">
+                  <input type="range" class="form-range" id="barraVolume" min="0" max="1" step="0.01" value=".1" oninput ="ajustarVolume(this.value), ajustarProgresso(this.value)">
+                    <div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                      <div id="barraDeProgresso" class="progress-bar-animated progress-bar-striped bg-warning" style="width: 100%">
+                      </div>
+                  </div>
+                </div>          
+            </div>
+<!-- ==================================================================================================================================================== -->
               <audio id="musica" control autoplay loop>
-                <source src="../assets/musica/ambiente.mp3" type="audio/mpeg">
-                Seu navegador não suporta o elemento de áudio.
+                 <source src="/assets/musica/ambiente.mp3" type="audio/mpeg"> <!-- trocar o audio quando tiver pronto -->
+                Seu navegador não suporta áudio.
               </audio>
-      
-                <script>
-                    window.onload = function() {
-                      ajustarVolume(0.1);
-                      ajustarProgresso(0.1);
-                    };
-
-                    function ajustarVolume(volume) {
-                      var musica = document.getElementById("musica");
-                      musica.volume = volume;
-                    }
-
-                    function ajustarProgresso(volume) {
-                      var barraDeProgresso = document.getElementById("barraDeProgresso");
-                      barraDeProgresso.style.width = (volume * 100) + "%";
-                    }
-
-                    // Verifique se o áudio não está reproduzindo
-                    let musica = document.getElementById("musica");
-                    if (musica.paused) {
-                      musica.play()
-                        .then(function() {
-                          console.log("Áudio reproduzido com sucesso!");
-                        })
-                        .catch(function(error) {
-                          console.log("Erro ao reproduzir áudio:", error);
-                        });
-                    }
-                </script>
-              </div>
+<!-- ==================================================================================================================================================== -->
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- ==================================================================================================================================================== -->
-
-      <section id="quizContainer" class="quizContainer quizPantanal" style="display: none;">
-        
+      </div>
+    </section>
     
-        <div class="quiz-content">
-    
-          <p id="tituloQuestao"></p>
-    
-          <div class="alternativas-container" id="alternativasContainer">
-            
-          </div>
-    
+    <section id="quizContainer" class="quizContainer quizPantanal" style="display: none;">
+      
+  
+      <div class="quiz-content">
+  
+        <p id="tituloQuestao"></p>
+  
+        <div class="alternativas-container" id="alternativasContainer">
+          
         </div>
-    
-        <div class="botao-responder">
-          <img src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_responder-pantanal.svg" alt="" id="botaoResponder" onmouseover="hoverImages(this, 'bt_responder-pantanal-over')" onmouseout="tiraHover(this, 'bt_responder-pantanal')">
-        </div>
-    
-        <div class="contagem-questoes">
-          <p>
-            <span class="contagem-dinamica"></span><span>/10</span>
-          </p>
-        </div>
-    
-      </section>
+  
+      </div>
+  
+      <div class="botao-responder">
+        <img src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_responder-pantanal.svg" alt="" id="botaoResponder" onmouseover="hoverImages(this, 'bt_responder-pantanal-over')" onmouseout="tiraHover(this, 'bt_responder-pantanal')">
+      </div>
+  
+      <div class="contagem-questoes">
+        <p>
+          <span class="contagem-dinamica"></span><span>/10</span>
+        </p>
+      </div>
+  
+    </section>
     
       
       <section id="loading" style="margin: 0 auto;">
@@ -446,6 +407,7 @@
   <script type="text/javascript" src="/javascripts/index.js"></script>
   <script type="text/javascript" src="/javascripts/events.js"></script>
   <script type="text/javascript" src="/javascripts/hovers.js"></script>
+  <script type="text/javascript" src="/javascripts/music.js" defer></script>
 
   <!-- COMPONENTES -->
   <script ype="text/javascript" src="/components/questoes.js"></script>

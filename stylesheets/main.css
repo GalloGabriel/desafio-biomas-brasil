@@ -29,14 +29,10 @@ body {
   flex-direction: column;
 }
 
-
-
 .logo-image{
   width: 50%;
   margin-top: 70px;
 }
-
-
 
 .iniciar-btn{
   width: 20%;
@@ -48,6 +44,7 @@ body {
 #teste{
   height: 100%;
 }
+
 #mapaInterativo{
   display: flex;
   flex-direction: row;
@@ -331,8 +328,6 @@ body {
   width: 100px;
   cursor: pointer;
   left: 30px;
-
-  /* position: absolute; */
   top: 6.5%;
   left: 48%;
   margin: 0;
