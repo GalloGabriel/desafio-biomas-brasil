@@ -198,6 +198,14 @@ body {
   justify-content: space-between;
 }
 
+.btnSimNao > img{
+  position: absolute;
+}
+
+.btnSimNao > img:nth-child(2){
+  right: 0;
+}
+
 .btnReiniciar-width{
   width: 150px;  
 }

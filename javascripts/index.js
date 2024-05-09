@@ -130,3 +130,27 @@ function chamaLoading(element){
     `
   $('#btnInfo').css('display', 'none');
 }
+
+
+function resetarJogo(){
+  
+var itensParaManter = ["primeiroAcesso"];
+let storageLocal = localStorage.length
+
+  for (let i = 0; i < storageLocal; i++) {
+    let chave = localStorage.key(i);
+    
+    if (!itensParaManter.includes(chave)) {
+      localStorage.removeItem(chave);
+      console.log("removeu o item " + i );
+      console.log(localStorage.length + " localStorage depois do for");
+    }
+  }
+
+  // localStorage.clear();
+
+  // setTimeout(() => {
+  //   window.location.href = "http://127.0.0.1:5500/index.html";
+  // }, 1000);
+
+}
