@@ -133,24 +133,52 @@ function chamaLoading(element){
 
 
 function resetarJogo(){
-  
-var itensParaManter = ["primeiroAcesso"];
-let storageLocal = localStorage.length
+  let storages = [
+    "modifiedQuestoesBioma3",
+    "modifiedQuestoesBioma1",
+    "questoesStorageBioma5",
+    "questoesCorretasBioma3",
+    "cardFeito2",
+    "cardFeito1",
+    "parabens2",
+    "cardFeito4",
+    "primeiroAcesso",
+    "status2",
+    "currentBloco",
+    "parabens5",
+    "modifiedQuestoesBioma6",
+    "status3",
+    "questoesStorageBioma6",
+    "questoesStorageBioma4",
+    "status1",
+    "parabens1",
+    "questoesStorageBioma1",
+    "cardFeito5",
+    "questoesCorretasBioma6",
+    "resumo",
+    "questoesCorretasBioma1",
+    "cardFeito6",
+    "modifiedQuestoesBioma5",
+    "questoesCorretasBioma5",
+    "questoesStorageBioma3",
+    "modifiedQuestoesBioma4",
+    "modifiedQuestoesBioma2",
+    "cardFeito3",
+    "questoesCorretasBioma2",
+    "saibaMais",
+    "parabens4",
+    "parabens6",
+    "parabens3",
+    "questoesStorageBioma2",
+    "questoesCorretasBioma4"
+];
 
-  for (let i = 0; i < storageLocal; i++) {
-    let chave = localStorage.key(i);
-    
-    if (!itensParaManter.includes(chave)) {
-      localStorage.removeItem(chave);
-      console.log("removeu o item " + i );
-      console.log(localStorage.length + " localStorage depois do for");
-    }
-  }
+    storages.map((items)=>{
+      localStorage.removeItem(items);
+    });
 
-  // localStorage.clear();
-
-  // setTimeout(() => {
-  //   window.location.href = "http://127.0.0.1:5500/index.html";
-  // }, 1000);
+    setTimeout(() => {
+      window.location.href = "http://127.0.0.1:5500/index.html";
+    }, 1000);
 
 }
