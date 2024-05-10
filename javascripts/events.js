@@ -30,6 +30,8 @@ for (let i = 0; i < arrayBiomas.length + 1; i++) {
       loadingBox.style.display = 'none';
 
       $('.curiosidadesContainer').css("display", "flex");
+      $('#btnMenuSuperior').css("display", "block");
+      $('#triggerAudioCerrado').css("display", "block");
       
       /*
       // Troca automaticamente o conteudo das curiosidades dos biomas

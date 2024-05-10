@@ -208,6 +208,7 @@ body {
 
 .btnReiniciar-width{
   width: 150px;  
+  cursor: pointer;
 }
 
 .info-comoJogar-img{
