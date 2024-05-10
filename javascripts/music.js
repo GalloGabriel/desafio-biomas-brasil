@@ -1,7 +1,7 @@
-window.onload = function() {
-    ajustarVolume(0.1);
-    ajustarProgresso(0.1);
-  };
+//Inicia a musica sem volume
+  ajustarVolume(0);
+  ajustarProgresso(0);
+  
 
   function ajustarVolume(volume) {
     var musica = document.getElementById("musica");

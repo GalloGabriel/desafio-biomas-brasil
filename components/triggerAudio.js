@@ -21,7 +21,7 @@ triggerAudioContainer.innerHTML = `
                 data-dismiss="modal">
             </div>
             <div class="progressBar-content">
-              <input type="range" class="form-range" id="barraVolume" min="0" max="1" step="0.01" value=".1" oninput ="ajustarVolume(this.value), ajustarProgresso(this.value)">
+              <input type="range" class="form-range" id="barraVolume" min="0" max="1" step="0.01" value="0" oninput ="ajustarVolume(this.value), ajustarProgresso(this.value)">
                 <div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   <div id="barraDeProgresso" class="progress-bar-animated progress-bar-striped bg-warning" style="width: 100%">
                   </div>
@@ -38,3 +38,5 @@ triggerAudioContainer.innerHTML = `
       </div>
     </div>
 `;
+
+

@@ -5,6 +5,7 @@ btnMenuContainer.innerHTML = `
      onmouseout="tiraHover(this, 'btn-menu_som')" 
      src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_som.svg" 
      alt="" 
+     id="btnSom"
      class="btnConfig-som" 
      data-toggle="modal" 
      data-target="#exampleModal">
