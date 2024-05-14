@@ -42,7 +42,8 @@ $('.iniciar-btn').click(function(){
   if(getPrimeiroAcesso === 'false'){
     setTimeout(() => {
       /*window.location.href = 'http://127.0.0.1:5501/mapa-interativo.html';*/
-      window.location.href = 'http://127.0.0.1:5500/mapa-interativo.html'
+      $('#indexComponent').css('display', 'none');
+      $('#mapaInterativoElement').css('display', 'flex');
       loadingBox.style.display = 'none';
       $('#btnInfo').css('display', 'flex');
     }, 3000);
