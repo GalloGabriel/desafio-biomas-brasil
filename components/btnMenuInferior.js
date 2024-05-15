@@ -2,7 +2,6 @@ let btnMenuContainerInferior = document.querySelectorAll(".btnMenuInferior");
 
 btnMenuContainerInferior.forEach(e => {
   e.innerHTML = `
-
   <div><img onmouseover="hoverImages(this, 'btn-menu_baixar-over')" onmouseout="tiraHover(this, 'btn-menu_baixar')" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_baixar.svg" alt="" class="btnConfig-baixar" ></div>
   <div>
       <img 

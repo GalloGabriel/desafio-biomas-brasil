@@ -6,7 +6,7 @@ indexComponent.innerHTML = `
 
 
   <!--Botões  -->
-  <section id="btnInfo">
+  <section id="btnInfo" class="btnInfo">
 
   </section>
    
@@ -89,7 +89,7 @@ indexComponent.innerHTML = `
 </section>
 
 <!-- Button trigger modal som -->
-<section class="pagina-inicial-container" id="triggerAudio">
+<section class="pagina-inicial-container" id="triggerAudio" class="triggerAudio">
 
 <!-- Conteúdo Javascript - arquivo: components/triggerAudio.js -->      
 

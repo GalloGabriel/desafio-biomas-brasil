@@ -350,13 +350,13 @@ body {
   position: absolute;
 }
 
-#btnInfo{
+.btnInfo{
   position: absolute;
   top: 6.5%;
   left: 0;
   margin: 0;
 }
-#btnInfo > img{
+.btnInfo > img{
   position: relative;
   width: 100px;
   cursor: pointer;
@@ -461,7 +461,7 @@ body {
     display: none;
   }
 
-  #btnInfo{
+  .btnInfo{
     display: none !important;
   }
 

@@ -5,6 +5,7 @@ const btnIniciar = document.querySelector('.iniciar-btn');
 const comoJogarContainer = document.querySelector('#comoJogar');
 const modalContent1 = document.querySelector("#modalContent1");
 const modalContent2 = document.querySelector("#modalContent2");
+let valorP = 1;
 
 //Verificando e criando localStorage de primeiro acesso na página
 
@@ -41,12 +42,28 @@ $('.iniciar-btn').click(function(){
   
   if(getPrimeiroAcesso === 'false'){
     setTimeout(() => {
+      console.log("Corrirgir aqui")
       /*window.location.href = 'http://127.0.0.1:5501/mapa-interativo.html';*/
-      $('#indexComponent').css('display', 'none');
-      $('#mapaInterativoElement').css('display', 'flex');
       loadingBox.style.display = 'none';
-      $('#btnInfo').css('display', 'flex');
-    }, 3000);
+      $('.btnInfo').css('display', 'flex');
+console.log(valorP)
+      switch (valorP) {
+        case 1:
+            $('#indexComponent').css('display', 'none');
+            $('#mapaInterativoElement').css('display', 'flex');
+            $('#menuElement').css('display', 'none');
+            valorP = 2;
+            console.log("entrou no switch valor 1")
+          break;
+        case 2:
+            $('#mapaInterativoElement').css('display', 'none');
+            $('#menuElement').css('display', 'flex');
+            console.log("entrou no switch valor 2")
+      
+        default:
+          break;
+      }
+    }, 2000);
   }
   
 })
@@ -72,12 +89,17 @@ $('#botaoAvancar').click(function(){
   mapaInterativo.style.display = 'none';
   chamaLoading('loading');
 
-  setTimeout(() => {
-    mapaInterativo.style.display = 'none';
-    /*window.location.href = 'http://127.0.0.1:5501/menu.html';*/
-    window.location.href = 'http://127.0.0.1:5500/menu.html'
-    $('#btnInfo').css('display', 'flex');
-  }, 3000);
+  console.log("uhuu");
+
+  // setTimeout(() => {
+  //   mapaInterativo.style.display = 'none';
+  //   /*window.location.href = 'http://127.0.0.1:5501/menu.html';*/
+  //   // window.location.href = 'http://127.0.0.1:5500/menu.html'
+    
+  //   $('#mapaInterativoElement').css('display', 'none');
+  //   $('#menuElement').css('display', 'flex')
+  //   // $('#btnInfo').css('display', 'flex');
+  // }, 500);
 })
 
 // Chamando Quiz
@@ -123,6 +145,7 @@ function trocaAutomaticaModal(){
 }
 
 function chamaLoading(element){
+  console.log("chamou loading");
   loadingBox.style.display = 'flex';
   loadingBox.innerHTML = `
     <div class="loading-icon-container">
@@ -130,6 +153,8 @@ function chamaLoading(element){
     </div>
     `
   $('#btnInfo').css('display', 'none');
+
+
 }
 
 

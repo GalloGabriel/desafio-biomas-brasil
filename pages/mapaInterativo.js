@@ -96,8 +96,8 @@ mapaInterativoElement.innerHTML = `
         </div>
       </section>
     
-      <section id="btnInfo">
-        
+      <section id="btnInfo2" class="btnInfo">
+      
       </section>
     
       <section id="loading">
@@ -169,7 +169,7 @@ mapaInterativoElement.innerHTML = `
 
 
      <!-- Button trigger modal som -->
-     <section class="pagina-inicial-container" id="triggerAudio">
+     <section class="pagina-inicial-container" id="triggerAudio" class="triggerAudio">
 
       <!-- Conteúdo Javascript - arquivo: components/triggerAudio.js -->      
       
