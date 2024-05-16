@@ -1,6 +1,6 @@
 //Inicia a musica sem volume
-  ajustarVolume(0);
-  ajustarProgresso(0);
+  ajustarVolume(0.5);
+  ajustarProgresso(0.5);
   
 
   function ajustarVolume(volume) {

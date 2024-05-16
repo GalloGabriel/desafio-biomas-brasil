@@ -22,6 +22,18 @@ body {
   position: relative;
 }
 
+.container-conteudo2{
+  /*https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-sistema.svg*/
+  background-image:none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  background-color: #f5f0f000;
+  height: 645px;
+  min-width: 1311px;
+  position: relative;
+}
+
 .pagina-inicial-container{
   display: flex;
   justify-content: center;
@@ -50,13 +62,13 @@ body {
   flex-direction: row;
   align-items: stretch;
   height: 100%;
+  width: 100%;
 }
 
 #mapaInterativo > div:nth-of-type(1){
   width: 20%;
   display: flex;
   align-items: flex-end;
-  margin-bottom: 110px;
   position: relative;
   left: 194px;
 }
@@ -71,8 +83,13 @@ body {
   width: 27%;
   display: flex;
   align-items: flex-end;
-  margin-bottom: 115px;
 }
+
+section#menuElement {
+  justify-content: center;
+}
+
+
 
 
 .logo-image-mapa{

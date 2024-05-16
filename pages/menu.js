@@ -1,18 +1,7 @@
 let menuElement = document.querySelector("#menuElement");
 
 menuElement.innerHTML = `
-  <div class="container container-conteudo" style="max-width: 1314px; height: 739px;">
     <!-- Seu conteúdo -->
-
-    <!--Botões  -->
-    <section id="btnMenuSuperior" class="btnConfig-teste btnMenuSuperior">
-    
-    </section>
-    
-    <section id="btnMenuInferior" class="btnCOnfig-teste btnMenuInferior">
-
-    </section>
-    
 
     <section id="menuJogo">
       <div class="menuContainer">
@@ -50,10 +39,6 @@ menuElement.innerHTML = `
           </div>
         </div>
       </div>
-    </section>
-  
-    <section id="btnInfo" class="btnInfo">
-      
     </section>
   
     <section id="loading">
@@ -122,13 +107,6 @@ menuElement.innerHTML = `
         </div>
       </div>
     </section>
-
-   <!-- Button trigger modal som -->
-   <section class="pagina-inicial-container" id="triggerAudio" class="triggerAudio">
-
-    <!-- Conteúdo Javascript - arquivo: components/triggerAudio.js -->      
-    
-  </section>      
 
     <!-- Modal Parabéns -->
     <div class="modal fade" id="modalParabens" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -233,6 +211,4 @@ menuElement.innerHTML = `
         </div>
       </div>
     </div>
-
-  </div>
 `

@@ -46,17 +46,21 @@ $('.iniciar-btn').click(function(){
       /*window.location.href = 'http://127.0.0.1:5501/mapa-interativo.html';*/
       loadingBox.style.display = 'none';
       $('.btnInfo').css('display', 'flex');
+      $('.btnMenuSuperior').css('display', 'flex');
+      $('.btnMenuInferior').css('display', 'flex');
 console.log(valorP)
       switch (valorP) {
         case 1:
-            $('#indexComponent').css('display', 'none');
+            // $('#indexComponent').css('display', 'none');
+            $('#paginaInicial').css('display', 'none');
+            // $('#indexComponent').remove();
             $('#mapaInterativoElement').css('display', 'flex');
             $('#menuElement').css('display', 'none');
             valorP = 2;
             console.log("entrou no switch valor 1")
           break;
         case 2:
-            $('#mapaInterativoElement').css('display', 'none');
+            $('#mapaInterativo').css('display', 'none');
             $('#menuElement').css('display', 'flex');
             console.log("entrou no switch valor 2")
       
@@ -152,10 +156,10 @@ function chamaLoading(element){
       <img src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/${element}.svg" alt="" class="loading-icon" />
     </div>
     `
-  $('#btnInfo').css('display', 'none');
-
-
-}
+    $('#btnInfo').css('display', 'none');
+    $('.btnMenuSuperior').css('display', 'none');
+    $('.btnMenuInferior').css('display', 'none');
+  }
 
 
 function resetarJogo(){
@@ -208,3 +212,11 @@ function resetarJogo(){
     }, 1000);
 
 }
+
+// $('#indexComponent').css('display', 'flex');
+// $('#paginaInicial').css('display', 'none');
+// $('#mapaInterativoElement').css('display', 'none');
+// $('#menuElement').css('display', 'flex');
+
+
+// utiliza pagina inicial para remover

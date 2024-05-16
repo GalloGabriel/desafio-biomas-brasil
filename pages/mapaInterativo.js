@@ -1,28 +1,24 @@
 let mapaInterativoElement = document.querySelector("#mapaInterativoElement");
 
 mapaInterativoElement.innerHTML = `
+  <!--Botões  -->
+  <section class="btnMenuInferior" class="btnConfig-teste">
 
-<div class="container container-conteudo" style="max-width: 1314px; height: 739px;">
-      <!-- Seu conteúdo -->
+  </section> 
+  
+  <section id="loading">
 
-      <!--Botões  -->
-      <section class="btnMenuSuperior" class="btnConfig-teste">
-      
-      </section> 
-      
-      <section class="btnMenuInferior" class="btnConfig-teste">
+  </section>
 
-      </section> 
-
-      <section id="mapaInterativo" class="pagina-inicial-container">
-        <div>
-          <img class="saiba-mais-img" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/saiba-mais.svg" alt="">
-        </div>
-        <div>
-          <!--
-          <img class="logo-image-mapa" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/mapa-interativo.svg" alt="">
-          -->
-          <?xml version="1.0" encoding="UTF-8"?>
+  <section id="mapaInterativo" class="pagina-inicial-container">
+    <div>
+      <img class="saiba-mais-img" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/saiba-mais.svg" alt="">
+    </div>
+    <div>
+      <!--
+      <img class="logo-image-mapa" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/mapa-interativo.svg" alt="">
+      -->
+      <?xml version="1.0" encoding="UTF-8"?>
 <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 889.51 896.8">
   <defs>
     <style>
@@ -95,94 +91,6 @@ mapaInterativoElement.innerHTML = `
           <img id="botaoAvancar" onmouseover="hoverImages(this, 'bt_avançar-over')" onmouseout="tiraHover(this, 'bt_avançar')" class="iniciar-btn" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_avançar.svg" alt="">
         </div>
       </section>
-    
-      <section id="btnInfo2" class="btnInfo">
-      
-      </section>
-    
-      <section id="loading">
-    
-      </section>
-    
-      <section id="comoJogar">
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-    
-            <div class="modal-content" id="modalContent1">
-              <img class="info-comoJogar-img" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/info-1.svg" alt="">
-    
-              <div class="infos1">
-    
-                <p>Somos <span style="font-weight: bold; color: #F0B323;">Bea e Zeca</span>, escoteiros mirins. Estamos aqui porque fomos convidados a participar de uma viagem pelo Brasil, a fim de conhecer as curiosidades e peculiaridades de cada bioma do nosso país. O que acha de vir com a gente nessa jornada e nos ajudar a conquistar a título de “<span style="font-weight: bold; color: #F0B323;">cidadão ambiental</span>”?</p>
-    
-              </div>
-    
-              <div class="indicador-conteudo">
-                <div id="inputBox1" class="input-box"><div class="inner-circle"></div></div>
-                <div id="inputBox2" class="input-box"></div>
-              </div>
-    
-              <div class="icone-fechar">
-                <img src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_x1.svg" alt="" data-dismiss="modal">
-              </div>
-            </div>
-    
-            <div class="modal-content" id="modalContent2" style="display: none;">
-              <img class="info-comoJogar-img" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/info-2.svg" alt="">
-    
-              <div class="infos2">
-    
-                <h3>Como jogar?</h3>
-    
-                <p><strong>É simples!</strong> Basta clicar em jogar e avançar pelos cards de cada bioma, respondendo corretamente cada pergunta do quiz. <br> <strong>Nosso objetivo é conquistar os três brasões. Para isto, você precisa nos ajudar a alcançar o mínimo de pontos em cada bioma:</strong></p>
-    
-                <div>
-                  <span><i class="fa fa-solid fa-check"></i></span>
-                  <span class="bioma-text-info"><span class="bioma-title-info">Terra</span>: mínimo 20 pts</span>
-                </div>
-    
-                <div>
-                  <span><i class="fa fa-solid fa-check"></i></span>
-                  <span class="bioma-text-info"><span class="bioma-title-info">Oxigênio</span>: mínimo 40 pts</span>
-                </div>
-    
-                <div>
-                  <span><i class="fa fa-solid fa-check"></i></span>
-                  <span class="bioma-text-info"><span class="bioma-title-info">Água</span>: mínimo 60 pts</span>
-                </div>
-    
-              </div>
-    
-              <div class="indicador-conteudo">
-                <div id="inputBox3" class="input-box"></div>
-                <div id="inputBox4" class="input-box"><div class="inner-circle"></div></div>
-              </div>
-    
-              <div class="icone-fechar">
-                <img src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_x1.svg" alt="" data-dismiss="modal">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-     <!-- Button trigger modal som -->
-     <section class="pagina-inicial-container" id="triggerAudio" class="triggerAudio">
-
-      <!-- Conteúdo Javascript - arquivo: components/triggerAudio.js -->      
-      
-    </section>
-
-        
-<!-- ==================================================================================================================================================== -->
-<!-- ==================================================================================================================================================== -->
- 
-<!-- ==================================================================================================================================================== -->
-<!-- ==================================================================================================================================================== -->
-
-
 
       <!-- ///////// MAPA INTERATIVO /////////////////////// -->
 
@@ -292,7 +200,4 @@ mapaInterativoElement.innerHTML = `
       <section id="menuJogo">
     
       </section>
-
-    </div>
-
 `;
