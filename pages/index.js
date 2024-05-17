@@ -87,7 +87,7 @@ indexComponent.innerHTML = `
 
   <img class="logo-image" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/logo.svg" alt="">
   <img onmouseover="hoverImages(this, 'bt_iniciar-over')" onmouseout="tiraHover(this, 'bt_iniciar')" id="botaoInicio1" class="iniciar-btn" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_iniciar.svg" alt="" data-toggle="modal" data-target="#exampleModalCenter">
-  <img onmouseover="hoverImages(this, 'bt_iniciar-over')" onmouseout="tiraHover(this, 'bt_iniciar')" id="botaoInicio2" class="iniciar-btn" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_iniciar.svg" alt="">
+  <img onmouseover="hoverImages(this, 'bt_iniciar-over')" onmouseout="tiraHover(this, 'bt_iniciar')" onclick="playMusica()" id="botaoInicio2" class="iniciar-btn" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_iniciar.svg" alt="">
 
 
 </section>

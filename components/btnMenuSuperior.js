@@ -3,6 +3,7 @@ btnMenuContainer.forEach(e => {
      e.innerHTML = `
           <img onmouseover="hoverImages(this, 'btn-menu_som-over')" 
           onmouseout="tiraHover(this, 'btn-menu_som')" 
+          onclick="playMusica()"
           src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_som.svg" 
           alt="" 
           id="btnSom"

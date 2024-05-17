@@ -1,5 +1,11 @@
 body {
   background-color: #5be0c6;
+  background-image: url('https://apps.univesp.br/brinquedoteca/_common/assets/unity-tile-esq.png');
+  background-position: center;
+}
+
+main#conteudoPrincipal {
+  flex: none;
 }
 
 .brinquedoteca{
@@ -88,9 +94,6 @@ body {
 section#menuElement {
   justify-content: center;
 }
-
-
-
 
 .logo-image-mapa{
   /* width: 50%;
@@ -410,8 +413,8 @@ section#menuElement {
   padding: 2px;
 }
 
-.fundo {
-  display: flex;
+/* .fundo {
+  display:block;
   position: absolute;
   top: 0;
   left: 0;
@@ -432,8 +435,18 @@ section#menuElement {
 .moldura:last-child {
   background-image: url('https://apps.univesp.br/brinquedoteca/_common/assets/unity-tile-dir.png');
   background-position: left;
-}
+} */
 
+/* hover do mapa interativo */
+.cls-1:hover, 
+.cls-2:hover, 
+.cls-3:hover, 
+.cls-4:hover, 
+.cls-5:hover, 
+.cls-6:hover, 
+.cls-7:hover {
+ filter: brightness(120%);
+}
 
 @media (max-height: 1360px) {
   #conteudoPrincipal{
@@ -495,3 +508,5 @@ section#menuElement {
   }
 
  }
+
+ 

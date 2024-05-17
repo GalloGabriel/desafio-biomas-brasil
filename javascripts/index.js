@@ -215,8 +215,7 @@ function resetarJogo(){
 
 // $('#indexComponent').css('display', 'flex');
 // $('#paginaInicial').css('display', 'none');
-// $('#mapaInterativoElement').css('display', 'none');
-// $('#menuElement').css('display', 'flex');
-
+// $('#mapaInterativoElement').css('display', 'flex');
+// $('#menuElement').css('display', 'none');
 
 // utiliza pagina inicial para remover

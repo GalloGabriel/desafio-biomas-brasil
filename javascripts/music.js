@@ -1,6 +1,6 @@
 //Inicia a musica sem volume
-  ajustarVolume(0.5);
-  ajustarProgresso(0.5);
+  ajustarVolume(0.03);
+  ajustarProgresso(0.03);
   
 
   function ajustarVolume(volume) {
@@ -24,3 +24,21 @@ if (musica.paused) {
       console.log("Erro ao reproduzir áudio:", error);
     });
 }
+
+function playMusica(){
+  musica.play()
+}
+
+if (localStorage.getItem('audioTime')) {
+    musica.currentTime = parseFloat(localStorage.getItem('audioTime'));
+}
+
+if (localStorage.getItem('volume')) {
+  musica.volume = parseFloat(localStorage.getItem('volume'));
+  volume.value = musica.volume;
+}
+
+// Adiciona um ouvinte de eventos para salvar o tempo decorrido da música para nao ficar repeteco :]
+musica.addEventListener('timeupdate', () => {
+    localStorage.setItem('audioTime', musica.currentTime);
+});
