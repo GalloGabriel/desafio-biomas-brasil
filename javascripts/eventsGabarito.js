@@ -4,9 +4,9 @@ $(document).ready(function(){
 
 $('#modalGabarito').on('hide.bs.modal', function(e){
   /*window.location.href = 'http://127.0.0.1:5501/menu.html';*/
-  window.location.href = 'http://127.0.0.1:5500/menu.html'
+  window.location.href = 'http://127.0.0.1:5500/index.html'
+  localStorage.setItem('paginaEmQueEsta', 'menuQuiz');
 });
-
 
 const currentQuiz = localStorage.getItem('currentBloco');
 const tituloTopico = document.querySelector('.thConteudo');
@@ -28,7 +28,6 @@ for (let i = 1; i < arrayBiomasGabarito.length + 1; i++) {
 const getQtdeQuestoesCertas = localStorage.getItem(`questoesCorretasBioma${currentQuestoes}`);
 let qtdeQuestoesCorretas = JSON.parse(getQtdeQuestoesCertas);
 let questoesCorretas = JSON.stringify(qtdeQuestoesCorretas);
-
 
 textoBarraPontuacao.innerHTML = `Você acertou ${questoesCorretas}/10`;
 tituloTopico.innerHTML = `Bioma: ${nameBiomaGabarito}`;
@@ -57,7 +56,6 @@ modifiedQuestoesStorage.map((item)=>{
   }
 })
 
-
 // Renderizando informações do gabarito de acordo com os acertos ou erros do usuário
 for (let i = 0; i < inicioQuestoesStorageGabarito.length; i++) {
 
@@ -70,6 +68,5 @@ for (let i = 0; i < inicioQuestoesStorageGabarito.length; i++) {
     let itemGabarito = criaGabarito(arrIcones[i].icone, inicioQuestoesStorageGabarito[i].topico, 'Esta questão você não acertou, mas pode refazer.');
 
     tableBody.appendChild(itemGabarito);
-  }
-  
+  }  
 }

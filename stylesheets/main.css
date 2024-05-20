@@ -17,7 +17,6 @@ main#conteudoPrincipal {
 }
 
 .container-conteudo{
-  /*https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-sistema.svg*/
   background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-sistema.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -29,7 +28,6 @@ main#conteudoPrincipal {
 }
 
 .container-conteudo2{
-  /*https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-sistema.svg*/
   background-image:none;
   background-repeat: no-repeat;
   background-size: contain;
@@ -96,28 +94,25 @@ section#menuElement {
 }
 
 .logo-image-mapa{
-  /* width: 50%;
-  margin-top: 40px;
-  margin-left: 100px; */
   position: absolute;
 }
 
 #botaoAvancar{
-  /* width: 22%;
-  margin: 0;
-  position: relative;
-  left: 400px;
-  bottom: 400px; */
   width: 100%;
 }
 
 .saiba-mais-img{
-  /* width: 30%;
-  margin: 0;
-  position: relative;
-  left: -230px;
-  bottom: 220px; */
   width: 100%;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% { transform: translate(-0,  -5px); }
+  50%  { transform: translate(0px, 5px); }
+  100%   { transform: translate(-0, -5px); }  
 }
 
 .btnConfig-config, .btnConfig-perfil, .btnConfig-som, .btnConfig-baixar,
@@ -333,11 +328,11 @@ section#menuElement {
   position: fixed;
 }
 
-  .margin-img-close{
-    margin-left: 127px;
-    margin-top: 9px;
-    transition: transform 0.3s ease;
-  }
+.margin-img-close{
+  margin-left: 127px;
+  margin-top: 9px;
+  transition: transform 0.3s ease;
+}
 
 .margin-img-close:hover{
   transform: scale(1.2);
@@ -376,6 +371,7 @@ section#menuElement {
   left: 0;
   margin: 0;
 }
+
 .btnInfo > img{
   position: relative;
   width: 100px;
@@ -412,30 +408,6 @@ section#menuElement {
   opacity: 1;
   padding: 2px;
 }
-
-/* .fundo {
-  display:block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}
-.moldura {
-  flex-grow: 1;
-  height: 100%;
-  background-size: auto;
-  background-repeat: repeat;
-}
-.moldura:first-child {
-  background-image: url('https://apps.univesp.br/brinquedoteca/_common/assets/unity-tile-esq.png');
-  background-position: right;
-}
-.moldura:last-child {
-  background-image: url('https://apps.univesp.br/brinquedoteca/_common/assets/unity-tile-dir.png');
-  background-position: left;
-} */
 
 /* hover do mapa interativo */
 .cls-1:hover, 
@@ -508,5 +480,3 @@ section#menuElement {
   }
 
  }
-
- 

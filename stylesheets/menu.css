@@ -22,7 +22,42 @@
 .cards-biomas > div{
   width: 130px;
   cursor: pointer;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
+
+@keyframes floating {
+0% { transform: translate(-0,  0px); }
+50%  { transform: translate(0px, 5px); }
+100%   { transform: translate(-0, 0px); }  
+}
+
+#cardAmazonia {
+  animation-delay: 0s;
+}
+
+#cardPantanal {
+  animation-delay: 0.5s;
+}
+
+#cardCerrado {
+  animation-delay: 1s;
+}
+
+#cardCaatinga {
+  animation-delay: 1.5s;
+}
+
+#cardMata {
+  animation-delay: 2s;
+}
+
+#cardPampas {
+  animation-delay: 2.5s;
+}
+
 
 .eachCard > span{
   position: relative;

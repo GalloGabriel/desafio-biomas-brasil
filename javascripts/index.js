@@ -5,8 +5,8 @@ const btnIniciar = document.querySelector('.iniciar-btn');
 const comoJogarContainer = document.querySelector('#comoJogar');
 const modalContent1 = document.querySelector("#modalContent1");
 const modalContent2 = document.querySelector("#modalContent2");
-let valorP = 1;
-
+let valorP = 0;
+let getPrimeiroAcesso = localStorage.getItem(`primeiroAcesso`);
 //Verificando e criando localStorage de primeiro acesso na página
 
 //Se for o primeiro acesso do usuário na página:
@@ -14,13 +14,10 @@ if(!localStorage.getItem(`primeiroAcesso`)){
   localStorage.setItem(`primeiroAcesso`, true)
 }
 
-let getPrimeiroAcesso = localStorage.getItem(`primeiroAcesso`);
-
 $('#btnInfo').click(function(){
   abreModalInfo();
   trocaAutomaticaModal();
 })
-
 
 $('.iniciar-btn').click(function(){
   //elementosInicio.style.display = 'none';
@@ -48,62 +45,29 @@ $('.iniciar-btn').click(function(){
       $('.btnInfo').css('display', 'flex');
       $('.btnMenuSuperior').css('display', 'flex');
       $('.btnMenuInferior').css('display', 'flex');
-console.log(valorP)
-      switch (valorP) {
-        case 1:
-            // $('#indexComponent').css('display', 'none');
-            $('#paginaInicial').css('display', 'none');
-            // $('#indexComponent').remove();
-            $('#mapaInterativoElement').css('display', 'flex');
-            $('#menuElement').css('display', 'none');
-            valorP = 2;
-            console.log("entrou no switch valor 1")
-          break;
-        case 2:
-            $('#mapaInterativo').css('display', 'none');
-            $('#menuElement').css('display', 'flex');
-            console.log("entrou no switch valor 2")
-      
-        default:
-          break;
-      }
+      interacaoMenu();
     }, 2000);
-  }
-  
-})
-
-$('#exampleModalCenter').on('hide.bs.modal', function(e){
-  
-  if(getPrimeiroAcesso === 'true'){
-    window.location.reload(true);
   }
 });
 
-if(getPrimeiroAcesso === 'true'){
-  $('#botaoInicio2').css('display', 'none');
-  $('#btnInfo').css('display', 'none');
-}else if(getPrimeiroAcesso === 'false'){
-  $('#botaoInicio1').css('display', 'none');
-  $('#btnInfo').css('display', 'flex');
-  $('#btnConfig').css('display', 'flex');
-}
+$('#exampleModalCenter').on('hide.bs.modal', function(e){
+  if(getPrimeiroAcesso === 'true'){
+    window.location.reload(true);
+    }
+  });
 
+  if(getPrimeiroAcesso === 'true'){
+    $('#botaoInicio2').css('display', 'none');
+    $('#btnInfo').css('display', 'none');
+  }else if(getPrimeiroAcesso === 'false'){
+    $('#botaoInicio1').css('display', 'none');
+    $('#btnInfo').css('display', 'flex');
+    $('#btnConfig').css('display', 'flex');
+  }
 
-$('#botaoAvancar').click(function(){
-  mapaInterativo.style.display = 'none';
-  chamaLoading('loading');
-
-  console.log("uhuu");
-
-  // setTimeout(() => {
-  //   mapaInterativo.style.display = 'none';
-  //   /*window.location.href = 'http://127.0.0.1:5501/menu.html';*/
-  //   // window.location.href = 'http://127.0.0.1:5500/menu.html'
-    
-  //   $('#mapaInterativoElement').css('display', 'none');
-  //   $('#menuElement').css('display', 'flex')
-  //   // $('#btnInfo').css('display', 'flex');
-  // }, 500);
+  $('#botaoAvancar').click(function(){
+    mapaInterativo.style.display = 'none';
+    chamaLoading('loading');
 })
 
 // Chamando Quiz
@@ -119,10 +83,7 @@ function showQuiz(curiosidadesContainer, quizContainer){
     quizCont.style.display = 'flex';
   }, 500)
 }
-
-
 //Alternando modal de "Como Jogar?"
-
 $('#inputBox3').click(function(){
   modalContent1.style.display = 'flex';
   modalContent2.style.display = 'none';
@@ -134,7 +95,6 @@ $('#inputBox2').click(function(){
 
 
 // Funções
-
 function abreModalInfo(){
   comoJogarContainer.style.display = 'block';
   modalContent1.style.display = 'flex';
@@ -159,8 +119,7 @@ function chamaLoading(element){
     $('#btnInfo').css('display', 'none');
     $('.btnMenuSuperior').css('display', 'none');
     $('.btnMenuInferior').css('display', 'none');
-  }
-
+}
 
 function resetarJogo(){
   let storages = [
@@ -200,7 +159,9 @@ function resetarJogo(){
     "parabens6",
     "parabens3",
     "questoesStorageBioma2",
-    "questoesCorretasBioma4"
+    "questoesCorretasBioma4",
+    "paginaEmQueEsta",
+    "audioTime"
 ];
 
     storages.map((items)=>{
@@ -213,9 +174,57 @@ function resetarJogo(){
 
 }
 
-// $('#indexComponent').css('display', 'flex');
-// $('#paginaInicial').css('display', 'none');
-// $('#mapaInterativoElement').css('display', 'flex');
-// $('#menuElement').css('display', 'none');
+if(localStorage.getItem('paginaEmQueEsta') == null){
 
-// utiliza pagina inicial para remover
+  localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
+
+}
+
+function interacaoMenu(){
+
+  switch (localStorage.getItem('paginaEmQueEsta')) {
+    case 'paginaInicial':
+        if(localStorage.getItem('paginaEmQueEsta') == 'paginaInicial'){
+          
+          $('#paginaInicial').css('display', 'none');
+          $('#mapaInterativoElement').css('display', 'flex');
+          $('#menuElement').css('display', 'none');
+        
+          localStorage.setItem('paginaEmQueEsta', 'mapaInterativo');
+        }
+        console.log("entrou no switch valor 1")
+      break;
+    case 'mapaInterativo':
+  
+        if(localStorage.getItem('paginaEmQueEsta') == 'mapaInterativo'){
+          console.log("liha 74 do switch case")
+          $('#mapaInterativo').css('display', 'none');
+          $('#menuElement').css('display', 'flex');
+          console.log("entrou no switch valor 2")
+  
+          localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
+        }
+        break;
+      case 'menuQuiz':
+  
+      if(localStorage.getItem('paginaEmQueEsta') == 'menuQuiz'){
+        $('#paginaInicial').css('display', 'none');
+        $('#mapaInterativo').css('display', 'none');
+        $('#mapaInterativoElement').css('display', 'flex');
+        $('#menuElement').css('display', 'flex');
+        
+        valorP = 1;
+        localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
+      }
+      break;
+  
+    default:
+      
+      break;
+  }
+}
+
+
+if(localStorage.getItem('paginaEmQueEsta') == 'menuQuiz'){
+  interacaoMenu();
+}

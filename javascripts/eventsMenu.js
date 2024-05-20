@@ -37,7 +37,7 @@ for (let i = 1; i < 6 + 1; i++) {
   if(!localStorage.getItem(`parabens${i}`)){
     localStorage.setItem(`parabens${i}`, false)
   }
-
+  
   let getCardsFeitos = localStorage.getItem(`cardFeito${i}`);
   let qtdeCardsFeitos = parseInt(getCardsFeitos);
   arrCardsFeitos.push(qtdeCardsFeitos);
@@ -45,14 +45,9 @@ for (let i = 1; i < 6 + 1; i++) {
 
 let arrPontuacaoMenu = Array.from(pontuacaoMenu);
 let arrEachCardImage = Array.from(eachCardImage);
-
 let arrSrcImages = [ 'c2-amaz', 'c2-pantanal', 'c2-cerrado', 'c2-caatinga', 'c2-mata', 'c2-pampas' ];
-
 let somaPontuacao = arrQtdeQuestoesCorretas.reduce((a,b) => a + b, 0);
-
 let somaCardsFeitos = arrCardsFeitos.reduce((a,b) => a + b, 0);
-
-console.log(somaCardsFeitos)
 
 /* Atualiza cards completos */
 for (let i = 0; i < arrQtdeQuestoesCorretas.length; i++) {
@@ -60,9 +55,6 @@ for (let i = 0; i < arrQtdeQuestoesCorretas.length; i++) {
     cardsCompletos++;
   }
 }
-
-
-console.log(cardsCompletos)
 
 let arrQtdeTotalQuestoes = [quizAmazonia.length, quizCaatinga.length, quizCerrado.length, quizMataAtlantica.length, quizPampas.length, quizPantanal.length];
 
@@ -86,40 +78,27 @@ if(somaCardsFeitos === 6 && somaPontuacao < qtdeTotalQuestoes && localStorage.ge
     }
 
     else if( $('#modalParabens').hasClass("show") ){
-
       $('#modalParabens').on('hide.bs.modal', function(e){
-
         setTimeout(()=>{
           if($('#modalStatus').hasClass("show")){
-
             $('#modalStatus').on('hide.bs.modal', function(e){
-  
               $('#modalResumo').modal('toggle');
-  
             });
-  
           }else{
             $('#modalResumo').modal('toggle');
           }
         }, 300)
-        
       })
-
     }
 
     else{
       $('#modalResumo').modal('toggle');
     }
-    
   }, 500);
-
-  localStorage.setItem('resumo', true);
-  
+  localStorage.setItem('resumo', true);  
 }
 
-
 for (let i = 0; i < 6; i++){
-  
   arrPontuacaoMenu[i].innerHTML = `${arrQtdeQuestoesCorretas[i]}/10`;
 
   if(arrQtdeQuestoesCorretas[i] === 10 && localStorage.getItem(`parabens${i+1}`) !== 'true'){
@@ -132,22 +111,15 @@ for (let i = 0; i < 6; i++){
     arrEachCardImage[i].src = `${BASE_IMG_URL}/${arrSrcImages[i]}.svg`;
     arrEachCardImage[i].style = disabledCard;
   }
-
-  
 }
 
 let arrPontuacoesPossiveis = [20, 40, 60];
-
-console.log(somaPontuacao)
-
 
 for (let i = 0; i < arrPontuacoesPossiveis.length; i++) {
   if(!localStorage.getItem(`status${i+1}`)){
     localStorage.setItem(`status${i+1}`, false)
   }
 }
-
-
 
 for (let i = 0; i < arrPontuacoesPossiveis.length; i++) {
   if(somaPontuacao >= arrPontuacoesPossiveis[i] && localStorage.getItem(`status${i+1}`) !== 'true'){
@@ -167,25 +139,6 @@ for (let i = 0; i < arrPontuacoesPossiveis.length; i++) {
     }, 300)
   }
 }
-
-
-/*
-$('#modalParabens').on('hide.bs.modal', function(e){
-
-  for (let i = 0; i < arrPontuacoesPossiveis.length; i++) {
-    if(somaPontuacao === arrPontuacoesPossiveis[i] && localStorage.getItem(`status${i+1}`) === 'false'){
-      localStorage.setItem(`status${i+1}`, true);
-      statusImage.innerHTML = `<img src="${BASE_IMG_URL}/status${i+1}.svg" alt="">`;
-      contentQtdePerguntasStatus.innerHTML = `${somaPontuacao}/60`;
-      contentQtdeCardsStatus.innerHTML = `${arrCardsStatus[i]}/6`
-      $('#modalStatus').modal('toggle');
-    }
-  }
-  
-});
-*/
-
-
 /* SAIBA MAIS  */
 
 localStorage.setItem('saibaMais', false);
@@ -208,13 +161,6 @@ $('.botao-acessar-dicas').click(function(){
         nextItemsArray.push(nextItem);
 
         nextItemsArray.forEach((item)=>{
-          /*
-          if(nextItemsArray.length === 13){
-            nextSaibaMaisContainer.style.left = '480px';
-          }else if(nextItemsArray.length === 12){
-            nextSaibaMaisContainer.style.left = '505px';
-          }
-          */
           nextSaibaMaisContainer.appendChild(item);
         });
 
@@ -246,7 +192,6 @@ $('.botao-acessar-dicas').click(function(){
 $('#modalStatus').on('hide.bs.modal', function(e){
   if(somaPontuacao === qtdeTotalQuestoes && localStorage.getItem('saibaMais') === 'false'){
     setTimeout(()=>{
-      /*window.location.href = 'http://127.0.0.1:5501/tela-final.html';*/
       window.location.href = 'http://127.0.0.1:5500/tela-final.html'
     }, 1000)
   }
@@ -257,7 +202,6 @@ $('#modalSaibaMais').on('hide.bs.modal', function(e){
   localStorage.setItem('saibaMais', false)
   if(somaPontuacao === qtdeTotalQuestoes){
     setTimeout(()=>{
-      /*window.location.href = 'http://127.0.0.1:5501/tela-final.html';*/
       window.location.href = 'http://127.0.0.1:5500/tela-final.html'
     }, 1000)
   }

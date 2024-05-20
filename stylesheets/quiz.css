@@ -1,10 +1,6 @@
-
 #conteudoPrincipalQuiz{
   height: 802.5px;
 }
-
-
-
 
 .container-quiz{
   background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-amaz.png);
@@ -26,21 +22,16 @@
   background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q1-amaz.svg);
   background-size: 100%;
   background-repeat: no-repeat;
-  /*display: flex;*/
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /*background-color: white;*/
   padding: 50px 50px;
-  /*border: 5px solid green;*/
-  /*border-radius: 0% 70px 0% 70px;*/
   min-height: 480px;
   width: 750px;
   margin: 150px auto 0 auto;
 }
 
 .curiosidade-box{
-  /* width: 60%; */
   display: none;
 }
 
@@ -49,10 +40,6 @@
 }
 
 .curiosidade-content{
-  /* width: 50%;
-  position: relative;
-  bottom: 290px;
-  left: 0px; */
   font-family: 'Montserrat', sans-serif;
   min-height: 140px;
   min-width: 620px;
@@ -72,7 +59,6 @@
   width: 870px;
   height: 495px;
   font-family: 'Montserrat', sans-serif;
-  /*background-color: rgba(255, 255, 255, .8);*/
   background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/q2-amaz.svg);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -155,10 +141,6 @@
 }
 
 .next-content-container{
-  /* position: relative;
-  bottom: 250px;
-  display: flex;
-  justify-content: center; */
   display: flex;
   gap: 15px;
   position: relative;
@@ -203,18 +185,14 @@
 
 .contagem-questoes{
   position: absolute;
-  /* left: 214px; */
   top: 0px;
   margin-right: 795px;
-  /*background-color: green;*/
   color: black;
   width: 100px;
   height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /*border: 9px solid white;*/
-  /*border-radius: 0px 100px 0px 100px;*/
 }
 
 .contagem-questoes > p{

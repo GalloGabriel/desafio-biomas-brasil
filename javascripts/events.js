@@ -31,22 +31,7 @@ for (let i = 0; i < arrayBiomas.length + 1; i++) {
 
       $('.curiosidadesContainer').css("display", "flex");
       $('#btnMenuSuperior').css("display", "block");
-      $('#triggerAudioCerrado').css("display", "block");
-      
-      /*
-      // Troca automaticamente o conteudo das curiosidades dos biomas
-      arrayCuriosidadesBiomas[i].forEach(
-        (element, i) => {
-        setTimeout(() => {
-          tituloCuriosidades.innerHTML = element.titulo;
-          nextContentContainer.innerHTML = element.indicador;
-          textoCuriosidade.innerHTML = element.curiosidade;
-          
-        }, 5000 * i);
-        
-      }); 
-      */
-      
+      $('#triggerAudioCerrado').css("display", "block");      
     }
     
     
