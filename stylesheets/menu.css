@@ -20,7 +20,8 @@
 }
 
 .cards-biomas > div{
-  width: 130px;
+  width: 160px;
+  margin-top: -52px;
   cursor: pointer;
   animation-name: floating;
   animation-duration: 3s;
