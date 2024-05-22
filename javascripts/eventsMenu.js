@@ -104,6 +104,7 @@ for (let i = 0; i < 6; i++){
   if(arrQtdeQuestoesCorretas[i] === 10 && localStorage.getItem(`parabens${i+1}`) !== 'true'){
     arrEachCardImage[i].src = `${BASE_IMG_URL}/${arrSrcImages[i]}.svg`;
     arrEachCardImage[i].style = disabledCard;
+    arrEachCardImage[i].parentNode.classList.add('animation-none');
     localStorage.setItem(`parabens${i+1}`, true);
     parabensImage.innerHTML = `<img src="${BASE_IMG_URL}/parabens${i+1}.svg" alt="">`;
     $('#modalParabens').modal('toggle');

@@ -264,7 +264,7 @@ function voltar(){
 
         $('#btnInfo').css('display', 'flex');
         $('.btnMenuSuperior').css('display', 'flex');
-        $('.btnMenuInferior').css('display', 'flex');
+        $('.btnMenuInferior').css('display', 'none');
         $('.btnVoltar').css('display', 'none');
 
         $('#paginaInicial').css('display', 'flex');

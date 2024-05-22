@@ -62,6 +62,7 @@
 .animation-none{
   animation: none !important;
   cursor: auto !important;
+  opacity: .5;
 }
 
 .eachCard > span{

@@ -166,13 +166,20 @@ section#menuElement {
 }
 
 .btnVoltar img {
-  width: 97px;
+  width: 99px;
   mix-blend-mode: multiply;
+  height: 96px;
+  padding: 23px;
+  position: relative;
+  top: -25px;
+  left: -26px;
+  border-radius: 50%;
 }
 
 .btnVoltar:hover{
   background-color: #009BBD;
 }
+
 
 .btnVoltar:hover img{
   /* filter: invert(1); */
