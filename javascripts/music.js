@@ -1,7 +1,7 @@
 let musica = document.getElementById("musica");
 
 //Inicia a musica com volume baixo
-ajustarVolume(0.0);
+ajustarVolume(0.03);
 ajustarProgresso(0.03);
 
 //ajustar volume

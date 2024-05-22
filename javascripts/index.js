@@ -40,7 +40,7 @@ $('.iniciar-btn').click(function(){
       trocaAutomaticaModal();
       $('#btnInfo').css('display', 'flex');
       //window.location.reload(true);
-    }, 3000);
+    }, 2000);
     localStorage.setItem(`primeiroAcesso`, false);
   }
   
@@ -52,9 +52,10 @@ $('.iniciar-btn').click(function(){
       $('.btnInfo').css('display', 'flex');
       $('.btnMenuSuperior').css('display', 'flex');
       $('.btnMenuInferior').css('display', 'flex');
+      $('.btnVoltar').css('display', 'flex');
       console.log(valorP)
       interacaoMenu();
-    }, 2000);
+    }, 1500);
   }
   
 })
@@ -79,8 +80,6 @@ if(getPrimeiroAcesso === 'true'){
 $('#botaoAvancar').click(function(){
   mapaInterativo.style.display = 'none';
   chamaLoading('loading');
-
-  console.log("uhuu");
 
   // setTimeout(() => {
   //   mapaInterativo.style.display = 'none';
@@ -146,6 +145,7 @@ function chamaLoading(element){
     $('#btnInfo').css('display', 'none');
     $('.btnMenuSuperior').css('display', 'none');
     $('.btnMenuInferior').css('display', 'none');
+    $('.btnVoltar').css('display', 'none');
   }
 
 
@@ -196,6 +196,7 @@ function resetarJogo(){
     });
 
     setTimeout(() => {
+      localStorage.removeItem("audioTime");
       // window.location.href = "http://127.0.0.1:5500/index.html";
       window.location.href = "http://127.0.0.1:5501/index.html";
     }, 1000);
@@ -212,6 +213,7 @@ function interacaoMenu(){
           $('#mapaInterativo').css('display', 'flex');
           $('#mapaInterativoElement').css('display', 'flex');
           $('#menuElement').css('display', 'none');
+          $('#btnVoltar').css('display', 'flex');
         
           localStorage.setItem('paginaEmQueEsta', 'mapaInterativo');
         }
@@ -222,6 +224,7 @@ function interacaoMenu(){
         if(localStorage.getItem('paginaEmQueEsta') == 'mapaInterativo'){
           $('#mapaInterativo').css('display', 'none');
           $('#menuElement').css('display', 'flex');
+          $('.menuContainer').css('display', 'flex');
   
           localStorage.setItem('paginaEmQueEsta', 'menuQuiz');
         }
@@ -249,26 +252,44 @@ if(localStorage.getItem('paginaEmQueEsta') == 'menuQuiz'){
 }
 // ===================================================================================
 function voltar(){
-  console.log(localStorage.getItem("paginaEmQueEsta"));
-let x = localStorage.getItem("paginaEmQueEsta");
-  if(x == 'mapaInterativo'){
-    // chamaLoading('loading');
+  chamaLoading('loading')
+  $('.menuContainer').css('display', 'none');
+  $('#mapaInterativo').css('display', 'none');
 
-      $('#paginaInicial').css('display', 'flex');
+  setTimeout(() => {    
+
+    let x = localStorage.getItem("paginaEmQueEsta");
+    if(x == 'mapaInterativo'){
+        loadingBox.style.display = 'none';
+
+        $('#btnInfo').css('display', 'flex');
+        $('.btnMenuSuperior').css('display', 'flex');
+        $('.btnMenuInferior').css('display', 'flex');
+        $('.btnVoltar').css('display', 'none');
+
+        $('#paginaInicial').css('display', 'flex');
+        $('#mapaInterativoElement').css('display', 'flex');
+        $('#mapaInterativo').css('display', 'none');
+        $('#btnVoltar').css('display', 'none');
+        localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
+
+
+    } else if(x == 'menuQuiz'){
+      loadingBox.style.display = 'none';
+
+      $('#btnInfo').css('display', 'flex');
+      $('.btnMenuSuperior').css('display', 'flex');
+      $('.btnMenuInferior').css('display', 'flex');
+      $('.btnVoltar').css('display', 'flex');
+
+      $('#paginaInicial').css('display', 'none');
+      $('#mapaInterativo').css('display', 'flex');
       $('#mapaInterativoElement').css('display', 'flex');
-      $('#mapaInterativo').css('display', 'none');
-      localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
+      $('#menuElement').css('display', 'none');
+      localStorage.setItem('paginaEmQueEsta', 'mapaInterativo');
+    }
 
-
-  } else if(x == 'menuQuiz'){
-    // chamaLoading('loading');
-
-    $('#paginaInicial').css('display', 'none');
-    $('#mapaInterativo').css('display', 'flex');
-    $('#mapaInterativoElement').css('display', 'flex');
-    $('#menuElement').css('display', 'none');
-    localStorage.setItem('paginaEmQueEsta', 'mapaInterativo');
-  }
+  }, 1500);
 }
 // ====================================================================================
 window.addEventListener('beforeunload', function () {

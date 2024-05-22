@@ -59,6 +59,10 @@
   animation-delay: 2.5s;
 }
 
+.animation-none{
+  animation: none !important;
+  cursor: auto !important;
+}
 
 .eachCard > span{
   position: relative;

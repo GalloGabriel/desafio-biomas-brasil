@@ -5,6 +5,9 @@ mapaInterativoElement.innerHTML = `
   <section class="btnMenuInferior" class="btnConfig-teste">
 
   </section> 
+  <section id="btnVoltar" class="btnVoltar">
+
+  </section>
   
   <section id="loading">
 

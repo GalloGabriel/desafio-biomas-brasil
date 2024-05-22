@@ -156,12 +156,13 @@ section#menuElement {
   position: absolute;
   display: flex;
   top: 49px;
-  left: 165px;
+  left: 50px;
   width: 97px;
   height: 97px;
   border-radius: 50%;
   padding:15px;
   border: 11px solid #fff;
+  background-color: #F5F0F0;
 }
 
 .btnVoltar img {
@@ -169,9 +170,8 @@ section#menuElement {
   mix-blend-mode: multiply;
 }
 
-
 .btnVoltar:hover{
-  background-color: #00AACC;
+  background-color: #009BBD;
 }
 
 .btnVoltar:hover img{
@@ -189,7 +189,7 @@ section#menuElement {
   justify-content: center;
   align-items: center;
   padding-top: 20%;
-  margin-left: 33%;
+  margin-left: 39%;
   margin-right: 33%;
 }
 
@@ -262,10 +262,16 @@ section#menuElement {
   width: 7px;
   left: 470px;
   top: 30px;
+  transition: transform 0.3s ease;
 }
 .icone-fechar > img{
-  width: 65px;
+  width: 55px;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icone-fechar:hover img{
+  transform: scale(1.2);
 }
 
 .indicador-conteudo{
@@ -356,14 +362,10 @@ section#menuElement {
 }
 
 .margin-img-close{
-  margin-left: 127px;
-  margin-top: 9px;
-  transition: transform 0.3s ease;
+  margin-left: 131px;
+  margin-top: 11px;
 }
 
-.margin-img-close:hover{
-  transform: scale(1.2);
-}
 
 .progressBar-content{
   position: relative;

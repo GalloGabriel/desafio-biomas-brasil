@@ -78,10 +78,6 @@ indexComponent.innerHTML = `
   <section id="btnInfo" class="btnInfo">
 
   </section>
-
-  <section id="btnVoltar" class="btnVoltar">
-
-  </section>
    
   <section class="btnMenuSuperior" class="btnConfig-teste">
 

@@ -110,6 +110,7 @@ for (let i = 0; i < 6; i++){
   }else if(arrQtdeQuestoesCorretas[i] === 10){
     arrEachCardImage[i].src = `${BASE_IMG_URL}/${arrSrcImages[i]}.svg`;
     arrEachCardImage[i].style = disabledCard;
+    arrEachCardImage[i].parentNode.classList.add('animation-none');
   }
 }
 

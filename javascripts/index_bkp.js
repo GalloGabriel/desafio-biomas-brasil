@@ -154,7 +154,7 @@ function trocaAutomaticaModal(){
 }
 
 function chamaLoading(element){
-  console.log("chamou loading");
+  console.log("chamou loading 157");
   loadingBox.style.display = 'flex';
   loadingBox.innerHTML = `
     <div class="loading-icon-container">
