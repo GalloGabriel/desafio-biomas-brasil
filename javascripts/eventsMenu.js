@@ -192,7 +192,8 @@ $('.botao-acessar-dicas').click(function(){
 $('#modalStatus').on('hide.bs.modal', function(e){
   if(somaPontuacao === qtdeTotalQuestoes && localStorage.getItem('saibaMais') === 'false'){
     setTimeout(()=>{
-      window.location.href = 'http://127.0.0.1:5500/tela-final.html'
+      // window.location.href = 'http://127.0.0.1:5500/tela-final.html'
+      window.location.href = 'http://127.0.0.1:5501/tela-final.html'
     }, 1000)
   }
 });
@@ -202,7 +203,8 @@ $('#modalSaibaMais').on('hide.bs.modal', function(e){
   localStorage.setItem('saibaMais', false)
   if(somaPontuacao === qtdeTotalQuestoes){
     setTimeout(()=>{
-      window.location.href = 'http://127.0.0.1:5500/tela-final.html'
+      // window.location.href = 'http://127.0.0.1:5500/tela-final.html'
+      window.location.href = 'http://127.0.0.1:5501/tela-final.html'
     }, 1000)
   }
 });

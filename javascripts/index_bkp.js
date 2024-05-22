@@ -6,19 +6,13 @@ const comoJogarContainer = document.querySelector('#comoJogar');
 const modalContent1 = document.querySelector("#modalContent1");
 const modalContent2 = document.querySelector("#modalContent2");
 let valorP = 0;
-
+let getPrimeiroAcesso = localStorage.getItem(`primeiroAcesso`);
 //Verificando e criando localStorage de primeiro acesso na página
-if(localStorage.getItem('paginaEmQueEsta') == null){
 
-  localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
-
-}
 //Se for o primeiro acesso do usuário na página:
 if(!localStorage.getItem(`primeiroAcesso`)){
   localStorage.setItem(`primeiroAcesso`, true)
 }
-
-let getPrimeiroAcesso = localStorage.getItem(`primeiroAcesso`);
 
 $('#btnInfo').click(function(){
   abreModalInfo();
@@ -32,7 +26,9 @@ $('.iniciar-btn').click(function(){
   chamaLoading('loading');
 
   if(getPrimeiroAcesso === 'true'){
+    console.log("line 28")
     setTimeout(() => {
+      console.log("line 30")
       //mapaInterativo.style.display = 'flex';
       $('#paginaInicial').css('display', 'flex');
       loadingBox.style.display = 'none';
@@ -45,52 +41,78 @@ $('.iniciar-btn').click(function(){
   }
   
   if(getPrimeiroAcesso === 'false'){
+    console.log("line 43")
     setTimeout(() => {
-      console.log("Corrirgir aqui")
+      console.log("line 45")
+      
       /*window.location.href = 'http://127.0.0.1:5501/mapa-interativo.html';*/
       loadingBox.style.display = 'none';
       $('.btnInfo').css('display', 'flex');
       $('.btnMenuSuperior').css('display', 'flex');
       $('.btnMenuInferior').css('display', 'flex');
-      console.log(valorP)
-      interacaoMenu();
+      // interacaoMenu();
+      switch (localStorage.getItem('paginaEmQueEsta')) {
+        case 'paginaInicial':
+            if(localStorage.getItem('paginaEmQueEsta') == 'paginaInicial'){
+              
+              $('#paginaInicial').css('display', 'none');
+              $('#mapaInterativoElement').css('display', 'flex');
+              $('#menuElement').css('display', 'none');
+            
+              localStorage.setItem('paginaEmQueEsta', 'mapaInterativo');
+            }
+            console.log("entrou no switch valor 1")
+          break;
+        case 'mapaInterativo':
+      
+            if(localStorage.getItem('paginaEmQueEsta') == 'mapaInterativo'){
+              $('#mapaInterativo').css('display', 'none');
+              $('#menuElement').css('display', 'flex');
+      
+              localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
+            }
+            break;
+          case 'menuQuiz':
+      
+          if(localStorage.getItem('paginaEmQueEsta') == 'menuQuiz'){
+            $('#paginaInicial').css('display', 'none');
+            $('#mapaInterativo').css('display', 'none');
+            $('#mapaInterativoElement').css('display', 'flex');
+            $('#menuElement').css('display', 'flex');
+            
+            localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
+          }
+          break;
+      
+        default:
+          
+          break;
+      }
     }, 2000);
-  }
-  
-})
-
-$('#exampleModalCenter').on('hide.bs.modal', function(e){
-  
-  if(getPrimeiroAcesso === 'true'){
-    window.location.reload(true);
   }
 });
 
-if(getPrimeiroAcesso === 'true'){
-  $('#botaoInicio2').css('display', 'none');
-  $('#btnInfo').css('display', 'none');
-}else if(getPrimeiroAcesso === 'false'){
-  $('#botaoInicio1').css('display', 'none');
-  $('#btnInfo').css('display', 'flex');
-  $('#btnConfig').css('display', 'flex');
-}
+$('#exampleModalCenter').on('hide.bs.modal', function(e){
+  if(getPrimeiroAcesso === 'true'){
+    console.log("line 59")
+    window.location.reload(true);
+    }
+  });
 
+  if(getPrimeiroAcesso === 'true'){
+    console.log("line 65")
+    $('#botaoInicio2').css('display', 'none');
+    $('#btnInfo').css('display', 'none');
+  }else if(getPrimeiroAcesso === 'false'){
+    console.log("line 69")
+    $('#botaoInicio1').css('display', 'none');
+    $('#btnInfo').css('display', 'flex');
+    $('#btnConfig').css('display', 'flex');
+  }
 
-$('#botaoAvancar').click(function(){
-  mapaInterativo.style.display = 'none';
-  chamaLoading('loading');
-
-  console.log("uhuu");
-
-  // setTimeout(() => {
-  //   mapaInterativo.style.display = 'none';
-  //   /*window.location.href = 'http://127.0.0.1:5501/menu.html';*/
-  //   // window.location.href = 'http://127.0.0.1:5500/menu.html'
-    
-  //   $('#mapaInterativoElement').css('display', 'none');
-  //   $('#menuElement').css('display', 'flex')
-  //   // $('#btnInfo').css('display', 'flex');
-  // }, 500);
+  $('#botaoAvancar').click(function(){
+    mapaInterativo.style.display = 'none';
+    chamaLoading('loading');
 })
 
 // Chamando Quiz
@@ -106,10 +128,7 @@ function showQuiz(curiosidadesContainer, quizContainer){
     quizCont.style.display = 'flex';
   }, 500)
 }
-
-
 //Alternando modal de "Como Jogar?"
-
 $('#inputBox3').click(function(){
   modalContent1.style.display = 'flex';
   modalContent2.style.display = 'none';
@@ -121,7 +140,6 @@ $('#inputBox2').click(function(){
 
 
 // Funções
-
 function abreModalInfo(){
   comoJogarContainer.style.display = 'block';
   modalContent1.style.display = 'flex';
@@ -146,12 +164,12 @@ function chamaLoading(element){
     $('#btnInfo').css('display', 'none');
     $('.btnMenuSuperior').css('display', 'none');
     $('.btnMenuInferior').css('display', 'none');
-  }
-
+}
 
 function resetarJogo(){
   let storages = [
-    "paginaEmQueEsta",
+    "primeiroAcesso",
+    "audioTime",
     "modifiedQuestoesBioma3",
     "modifiedQuestoesBioma1",
     "questoesStorageBioma5",
@@ -160,7 +178,6 @@ function resetarJogo(){
     "cardFeito1",
     "parabens2",
     "cardFeito4",
-    "primeiroAcesso",
     "status2",
     "currentBloco",
     "parabens5",
@@ -188,7 +205,8 @@ function resetarJogo(){
     "parabens6",
     "parabens3",
     "questoesStorageBioma2",
-    "questoesCorretasBioma4"
+    "questoesCorretasBioma4",
+    "paginaEmQueEsta"
 ];
 
     storages.map((items)=>{
@@ -196,9 +214,15 @@ function resetarJogo(){
     });
 
     setTimeout(() => {
-      // window.location.href = "http://127.0.0.1:5500/index.html";
       window.location.href = "http://127.0.0.1:5501/index.html";
+      // location.reload(true);
     }, 1000);
+
+}
+
+if(localStorage.getItem('paginaEmQueEsta') == null){
+
+  localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
 
 }
 
@@ -209,7 +233,6 @@ function interacaoMenu(){
         if(localStorage.getItem('paginaEmQueEsta') == 'paginaInicial'){
           
           $('#paginaInicial').css('display', 'none');
-          $('#mapaInterativo').css('display', 'flex');
           $('#mapaInterativoElement').css('display', 'flex');
           $('#menuElement').css('display', 'none');
         
@@ -223,7 +246,7 @@ function interacaoMenu(){
           $('#mapaInterativo').css('display', 'none');
           $('#menuElement').css('display', 'flex');
   
-          localStorage.setItem('paginaEmQueEsta', 'menuQuiz');
+          localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
         }
         break;
       case 'menuQuiz':
@@ -234,11 +257,12 @@ function interacaoMenu(){
         $('#mapaInterativoElement').css('display', 'flex');
         $('#menuElement').css('display', 'flex');
         
+        localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
       }
       break;
   
     default:
-    localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
+      
       break;
   }
 }
@@ -247,38 +271,3 @@ function interacaoMenu(){
 if(localStorage.getItem('paginaEmQueEsta') == 'menuQuiz'){
   interacaoMenu();
 }
-// ===================================================================================
-function voltar(){
-  console.log(localStorage.getItem("paginaEmQueEsta"));
-let x = localStorage.getItem("paginaEmQueEsta");
-  if(x == 'mapaInterativo'){
-    // chamaLoading('loading');
-
-      $('#paginaInicial').css('display', 'flex');
-      $('#mapaInterativoElement').css('display', 'flex');
-      $('#mapaInterativo').css('display', 'none');
-      localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
-
-
-  } else if(x == 'menuQuiz'){
-    // chamaLoading('loading');
-
-    $('#paginaInicial').css('display', 'none');
-    $('#mapaInterativo').css('display', 'flex');
-    $('#mapaInterativoElement').css('display', 'flex');
-    $('#menuElement').css('display', 'none');
-    localStorage.setItem('paginaEmQueEsta', 'mapaInterativo');
-  }
-}
-// ====================================================================================
-window.addEventListener('beforeunload', function () {
-  localStorage.removeItem('paginaEmQueEsta');
-});
-
-// $('#indexComponent').css('display', 'flex');
-// $('#paginaInicial').css('display', 'none');
-// $('#mapaInterativoElement').css('display', 'none');
-// $('#menuElement').css('display', 'flex');
-
-
-// utiliza pagina inicial para remover

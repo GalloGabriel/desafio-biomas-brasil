@@ -312,8 +312,8 @@ function chamaProximaQuestao(evt){
         localStorage.setItem(`cardFeito${currentBloco}`, 1)
       }
 
-      /*window.location.href = 'http://127.0.0.1:5501/gabarito.html';*/
-      window.location.href = 'http://127.0.0.1:5500/gabarito.html'
+      window.location.href = 'http://127.0.0.1:5501/gabarito.html';
+      // window.location.href = 'http://127.0.0.1:5500/gabarito.html'
     }
 
   }

@@ -34,7 +34,6 @@ for (let i = 0; i < arrayBiomas.length + 1; i++) {
       $('#triggerAudioCerrado').css("display", "block");      
     }
     
-    
   }
   
 }

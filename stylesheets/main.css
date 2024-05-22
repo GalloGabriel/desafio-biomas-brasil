@@ -152,6 +152,33 @@ section#menuElement {
   left: 13%;
 }
 
+.btnVoltar{
+  position: absolute;
+  display: flex;
+  top: 49px;
+  left: 165px;
+  width: 97px;
+  height: 97px;
+  border-radius: 50%;
+  padding:15px;
+  border: 11px solid #fff;
+}
+
+.btnVoltar img {
+  width: 97px;
+  mix-blend-mode: multiply;
+}
+
+
+.btnVoltar:hover{
+  background-color: #00AACC;
+}
+
+.btnVoltar:hover img{
+  /* filter: invert(1); */
+  mix-blend-mode:color-burn;
+}
+
 #loading{
   display: none;
 }
