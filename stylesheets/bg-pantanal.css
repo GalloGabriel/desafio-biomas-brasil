@@ -1,5 +1,5 @@
 .container-quiz{
-  background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-pantanal.png);
+    background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-pantanal.png);
 }
 
 .curiosidadesContainer{
@@ -23,3 +23,4 @@
 .carousel-indicators .active{
   background-color: #afbc30;
 }
+

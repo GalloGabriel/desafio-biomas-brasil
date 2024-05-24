@@ -3,11 +3,11 @@
 }
 
 .container-quiz{
-  background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-amaz.png);
+  /* background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-amaz.png); */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50%;
-  background-color: #5be0c6;
+  /* background-color: #5be0c6; */
   position: relative;
   height: 690px;
 }
