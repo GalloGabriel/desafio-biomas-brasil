@@ -9,10 +9,19 @@ let valorP = 0;
 
 //Verificando e criando localStorage de primeiro acesso na página
 if(localStorage.getItem('paginaEmQueEsta') == null){
-
   localStorage.setItem('paginaEmQueEsta', 'paginaInicial');
-
 }
+
+if(localStorage.getItem('btnVoltarQuiz') == null){
+  localStorage.setItem('btnVoltarQuiz', 'nao');
+}
+
+// Verifica se o botao voltar foi usado na no quiz
+let y = localStorage.getItem("btnVoltarQuiz");
+if(y == 'sim'){
+  localStorage.setItem('paginaEmQueEsta', 'menuQuiz');
+}
+
 //Se for o primeiro acesso do usuário na página:
 if(!localStorage.getItem(`primeiroAcesso`)){
   localStorage.setItem(`primeiroAcesso`, true)
@@ -46,14 +55,14 @@ $('.iniciar-btn').click(function(){
   
   if(getPrimeiroAcesso === 'false'){
     setTimeout(() => {
-      console.log("Corrirgir aqui")
+      
       /*window.location.href = 'http://127.0.0.1:5501/mapa-interativo.html';*/
       loadingBox.style.display = 'none';
       $('.btnInfo').css('display', 'flex');
       $('.btnMenuSuperior').css('display', 'flex');
       $('.btnMenuInferior').css('display', 'flex');
       $('.btnVoltar').css('display', 'flex');
-      console.log(valorP)
+      
       interacaoMenu();
     }, 1500);
   }
@@ -205,6 +214,7 @@ function resetarJogo(){
 
 function interacaoMenu(){
 
+
   switch (localStorage.getItem('paginaEmQueEsta')) {
     case 'paginaInicial':
         if(localStorage.getItem('paginaEmQueEsta') == 'paginaInicial'){
@@ -217,7 +227,7 @@ function interacaoMenu(){
         
           localStorage.setItem('paginaEmQueEsta', 'mapaInterativo');
         }
-        console.log("entrou no switch valor 1")
+        
       break;
     case 'mapaInterativo':
   
@@ -256,9 +266,16 @@ function voltar(){
   $('.menuContainer').css('display', 'none');
   $('#mapaInterativo').css('display', 'none');
 
+  if(localStorage.getItem('btnVoltarQuiz') == 'sim'){
+
+    window.location.href = "http://127.0.0.1:5501/index.html";
+    
+  } 
+
   setTimeout(() => {    
 
     let x = localStorage.getItem("paginaEmQueEsta");
+
     if(x == 'mapaInterativo'){
         loadingBox.style.display = 'none';
 
@@ -287,10 +304,11 @@ function voltar(){
       $('#mapaInterativoElement').css('display', 'flex');
       $('#menuElement').css('display', 'none');
       localStorage.setItem('paginaEmQueEsta', 'mapaInterativo');
-    }
+      }
 
-  }, 1500);
-}
+    }, 1500);
+  }
+
 // ====================================================================================
 window.addEventListener('beforeunload', function () {
   localStorage.removeItem('paginaEmQueEsta');
@@ -303,3 +321,5 @@ window.addEventListener('beforeunload', function () {
 
 
 // utiliza pagina inicial para remover
+
+localStorage.setItem("btnVoltarQuiz", "nao");

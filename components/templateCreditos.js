@@ -24,7 +24,7 @@ creditosBody.innerHTML = `
   <p><span class="funcao">Roteirização e Design Instrucional</span>Daniel Dantas</p>
   <p><span class="funcao">Ilustração</span>Carlos Henrique Bossolan</p>
   <p><span class="funcao">Layout</span>Alexandre Tavares Alves dos Santos</p>
-  <p><span class="funcao">Programação</span>Gabriel Gallo</p>
+  <p><span class="funcao">Programação</span>Gabriel Gallo | Caique Silva</p>
 `;
 
 let creditosFooter = document.createElement("div");

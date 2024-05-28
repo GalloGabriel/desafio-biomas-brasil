@@ -2,6 +2,49 @@
   height: 802.5px;
 }
 
+video {
+  width: 96%;
+  height: 93%;
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+  top: 24px;
+  left: 25px;
+}
+
+section.curiosidadesContainer {
+  visibility: hidden;
+  animation-name: slit-in-horizontal;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+@keyframes slit-in-horizontal {
+    
+  0% {
+      transform:translateZ(-800px) rotateX(90deg);
+      opacity:0;
+      visibility: visible;
+  }
+  50% {
+      transform:translateZ(-160px) rotateX(87deg);
+      opacity:1;
+  }
+  100% {
+      transform:translateZ(0) rotateX(0);
+      visibility: visible;
+  }
+}
+
+section#btnVoltar{
+  display: flex !important;
+}
+
 .container-quiz{
   /* background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-amaz.png); */
   background-repeat: no-repeat;
@@ -29,6 +72,10 @@
   min-height: 480px;
   width: 750px;
   margin: 150px auto 0 auto;
+  
+  position: absolute;
+  left: 254px;
+  top: 0;
 }
 
 .curiosidade-box{

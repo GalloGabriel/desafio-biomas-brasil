@@ -1,5 +1,3 @@
-console.log("mais uai sô")
-
 // let triggerAudioContainer = document.querySelector("#triggerAudio");
 
 // triggerAudioContainer.innerHTML = `

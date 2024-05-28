@@ -3,6 +3,8 @@ const alternativasContainer = document.querySelector('#alternativasContainer');
 const contagemDinamica = document.querySelector('.contagem-dinamica');
 let styleAlternativaSelecionada;
 
+localStorage.setItem('btnVoltarQuiz', 'sim');
+
 // Criando variável que armazenará o numero do bloco atual
 let currentBloco;
 
