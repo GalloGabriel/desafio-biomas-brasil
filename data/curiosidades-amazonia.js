@@ -72,7 +72,7 @@ let curiosidadesAmazonia = [
   {
     "id": 6,
     "titulo": "#6 - Fatos Peculiares:",
-    "curiosidade": 'A Floresta Amazônica é considerada o "pulmão do mundo" devido à sua grande capacidade de produzir oxigênio e absorver dióxido de carbono.',
+    "curiosidade": `O vapor d'água que sai da Floresta Amazônica e vira chuva em outras regiões equivale a um Rio São Francisco por dia, irrigando as lavouras, enchendo os reservatórios das hidrelétricas e as estações de abastecimento das cidades.`,
     "indicador": `<div class="next-content"></div>
     <div class="next-content"></div>
     <div class="next-content"></div>

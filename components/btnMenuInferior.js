@@ -12,7 +12,8 @@ btnMenuContainerInferior.forEach(e => {
           class="btnConfig-reiniciar"
           data-toggle="modal" 
           data-target="#modalReiniciar"></div>
-  <div><img onmouseover="hoverImages(this, 'btn-menu_cert-off')" onmouseout="tiraHover(this, 'btn-menu_cert-off')" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_cert-off.svg" alt="" class="btnConfig-cert" ></div>
+          
+  <div id="botaoCertificadoContainer"><img onmouseover="hoverImages(this, 'btn-menu_cert-off')" onmouseout="tiraHover(this, 'btn-menu_cert-off')" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_cert-off.svg" alt="" class="btnConfig-cert" ></div>
   
   <!-- Modal Som-->
   <section id="modalBtnReiniciar">

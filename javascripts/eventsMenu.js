@@ -210,3 +210,22 @@ $('#modalSaibaMais').on('hide.bs.modal', function(e){
     }, 1000)
   }
 });
+
+
+if(somaPontuacao >= 20){
+  let botaoStatusContainer = document.querySelector("#botaoStatusContainer");
+
+  botaoStatusContainer.innerHTML = `<img id="botaoMenuStatusJogo" title="status" onmouseover="hoverImages(this, 'btn-menu_perfil-over')" onmouseout="tiraHover(this, 'btn-menu_perfil')" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_perfil.svg" alt="" class="btnConfig-perfil" >`
+
+  $("#botaoMenuStatusJogo").click(function(){
+    alert('chama status')
+  })
+}
+
+
+
+if(somaPontuacao === qtdeTotalQuestoes){
+  let botaoCertificadoContainer = document.querySelector("#botaoCertificadoContainer");
+
+  botaoCertificadoContainer.innerHTML = `<a href="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/certificado_desafio-biomas.pdf" target="_blank"><img onmouseover="hoverImages(this, 'btn-menu_cert-over')" onmouseout="tiraHover(this, 'btn-menu_cert')" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_cert.svg" alt="" class="btnConfig-cert" ></a>`
+}

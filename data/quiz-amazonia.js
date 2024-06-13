@@ -310,7 +310,7 @@ let quizAmazonia = [
 
   {
     "questaoId": 8,
-    "titulo": `O que torna a Floresta Amazônica conhecida como o "pulmão do mundo"?`,
+    "titulo": `O que torna a Floresta Amazônica importante para o clima e a economia?`,
     "topico": "Fatos Peculiares",
     "questaoFeitaCorreta": "false",
 
@@ -326,7 +326,7 @@ let quizAmazonia = [
         "ordem": Math.floor(Math.random() * 1000000),
         "alternativaId": 1,
         "questaoCorreta": true,
-        "questaoText": "Sua grande capacidade de produzir oxigênio e absorver dióxido de carbono."
+        "questaoText": "Sua grande capacidade de  regular o ciclo das chuvas que abastece outras regiões do país."
       },
 
       {

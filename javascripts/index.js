@@ -5,6 +5,10 @@ const btnIniciar = document.querySelector('.iniciar-btn');
 const comoJogarContainer = document.querySelector('#comoJogar');
 const modalContent1 = document.querySelector("#modalContent1");
 const modalContent2 = document.querySelector("#modalContent2");
+
+const comoJogarContainer2 = document.querySelector('#comoJogar2');
+const modalContent3 = document.querySelector("#modalContent3");
+const modalContent4 = document.querySelector("#modalContent4");
 let valorP = 0;
 
 //Verificando e criando localStorage de primeiro acesso na página
