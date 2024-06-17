@@ -215,12 +215,23 @@ $('#modalSaibaMais').on('hide.bs.modal', function(e){
 if(somaPontuacao >= 20){
   let botaoStatusContainer = document.querySelector("#botaoStatusContainer");
 
-  botaoStatusContainer.innerHTML = `<img id="botaoMenuStatusJogo" title="status" onmouseover="hoverImages(this, 'btn-menu_perfil-over')" onmouseout="tiraHover(this, 'btn-menu_perfil')" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_perfil.svg" alt="" class="btnConfig-perfil" >`
+  botaoStatusContainer.innerHTML = `<img id="botaoMenuStatusJogo" title="status" onmouseover="hoverImages(this, 'btn-menu_perfil-over')" onmouseout="tiraHover(this, 'btn-menu_perfil')" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_perfil.svg" alt="" class="btnConfig-perfil" data-toggle="modal" data-target="#modalStatus">`
 
   $("#botaoMenuStatusJogo").click(function(){
-    alert('chama status')
-  })
-}
+    let valorPontuacao = 1;
+
+    if(somaPontuacao > 40){
+      valorPontuacao = 3
+    } else if(somaPontuacao > 20){
+      valorPontuacao = 2
+    }
+
+    statusImage.innerHTML = `<img src="${BASE_IMG_URL}/status${valorPontuacao}.svg" alt="">`;
+    contentQtdePerguntasStatus.innerHTML = `${somaPontuacao}/60`;
+    contentQtdeCardsStatus.innerHTML = `${cardsCompletos}/6`;
+
+      })
+    }
 
 
 

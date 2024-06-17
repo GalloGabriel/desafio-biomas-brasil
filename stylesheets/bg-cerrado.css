@@ -31,3 +31,12 @@
   bottom: 610px;
 }
 
+
+.btnConfig-som {
+  top: 5%;
+  right: 9%;
+}
+
+.btnConfig-perfil {
+  display: none;
+}

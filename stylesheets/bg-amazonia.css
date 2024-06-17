@@ -2,3 +2,12 @@
     background-image: url(https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-amaz.png);
     position: relative;
 }
+
+.btnConfig-som {
+    top: 5%;
+    right: 9%;
+}
+
+.btnConfig-perfil {
+    display: none;
+}

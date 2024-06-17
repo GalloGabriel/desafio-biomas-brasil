@@ -82,10 +82,11 @@ $('#exampleModalCenter').on('hide.bs.modal', function(e){
 
 if(getPrimeiroAcesso === 'true'){
   $('#botaoInicio2').css('display', 'none');
-  $('#btnInfo').css('display', 'none');
+  $('#btnInfo').css('pointer-events', 'none');
 }else if(getPrimeiroAcesso === 'false'){
   $('#botaoInicio1').css('display', 'none');
-  $('#btnInfo').css('display', 'flex');
+  $('.btn_disable').css('display', 'none');
+  $('#btnInfo').css('pointer-events', 'auto');
   $('#btnConfig').css('display', 'flex');
 }
 
@@ -156,6 +157,7 @@ function chamaLoading(element){
     </div>
     `
     $('#btnInfo').css('display', 'none');
+    $('.btn_disable').css('display', 'none');
     $('.btnMenuSuperior').css('display', 'none');
     $('.btnMenuInferior').css('display', 'none');
     $('.btnVoltar').css('display', 'none');

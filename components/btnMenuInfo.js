@@ -1,6 +1,7 @@
 let botaoMenuInfoContainer = document.querySelectorAll('.btnInfo');
 botaoMenuInfoContainer.forEach(e =>{
 e.innerHTML = `
+<div class="btn_disable"></div>
 <img 
     id="btnMenuInfo" 
     onmouseover="hoverImages(this, 'btn-menu-info-over')" 

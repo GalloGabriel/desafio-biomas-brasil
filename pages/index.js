@@ -7,6 +7,89 @@ indexComponent.innerHTML = `
 </section>
 
 
+<!-- Modal Status -->
+<div class="modal fade" id="modalStatus" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content" id="modalContent1" style="margin-top: 130px;">
+
+      <div class="status-img">
+        
+      </div>
+
+      <div class="icone-fechar" id="fecharModalStatus">
+        <img src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_x1.svg" alt="" data-dismiss="modal">
+      </div>
+
+      <div class="qtde-perguntas-status" style="bottom: 295px; left: 288px;">
+        <span id="contentQtdePerguntasStatus"></span>
+      </div>
+
+      <div class="qtde-cards-status" style="bottom: 215px; left: 315px;">
+        <span id="contentQtdeCardsStatus"></span>
+      </div>
+
+
+      
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Modal Saiba Mais -->
+<div class="modal fade" id="modalSaibaMais" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content" id="modalContent1" style="margin-top: 130px;">
+
+      <div class="status-img" id="voceSabiaImg">
+        
+      </div>
+
+      <div class="icone-fechar" id="fecharModalStatus">
+        <img src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_x1.svg" alt="" data-dismiss="modal">
+      </div>
+
+      <div class="titulo-saiba-mais posicionamento-voce-sabia">
+        <h3 class="tituloSaibaMais"></h3>
+      </div>
+
+      <div class="conteudo-voce-sabia posicionamento-voce-sabia">
+        
+      </div>
+
+      <div class="next-saibaMais-container">
+        
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Modal Resumo -->
+<div class="modal fade" id="modalResumo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background-color: #009bbd; align-items: normal; margin-top: 130px;">
+      <div class="modal-header">
+        <h5 style="color: #fff; font-weight: bold; font-size: 24px;" class="modal-title" id="exampleModalLabel">Confira sua jornada até o momento!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span style="color: #fff;" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div style="color: #fff; font-size: 18px; font-weight: bold;" class="modal-body">
+        <p>Pontos conquistados: <span id="pontosConquistadosResumo"></span></p>
+        <p>Cards concluídos: <span id="cardsConcluidosResumo"></span></p>
+        
+        <p>Continue completando os cards para ganhar mais pontos e conquistar o titulo de Cidadão Ambiental!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <section id="comoJogar">
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -185,4 +268,6 @@ indexComponent.innerHTML = `
 </section>
 
 </div>
+
+
 `

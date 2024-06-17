@@ -143,13 +143,26 @@ section#menuElement {
 }
 
 .btnConfig-reiniciar{
-  bottom: 10%;
-  left: 6%;
+  bottom: 15%;
+  left: 3%;
 }
 
 .btnConfig-cert{
-  bottom: 1.5%;
-  left: 13%;
+  bottom: 4.5%;
+  left: 9%;
+}
+
+.btn_disable{
+  position: absolute;
+  top: 1px;
+  right: -48px;
+  width: 80px;
+  height: 80px;
+  border: 9px solid #fff;
+  box-sizing: content-box;
+  border-radius: 100%;
+  background-color: #1a161690;
+  z-index: 10000000;
 }
 
 .btnVoltar{
@@ -157,33 +170,11 @@ section#menuElement {
   display: flex;
   top: 49px;
   left: 50px;
-  width: 97px;
-  height: 97px;
-  border-radius: 50%;
-  padding:15px;
-  border: 11px solid #fff;
-  background-color: #F5F0F0;
+  width: 200px;
 }
 
-.btnVoltar img {
-  width: 99px;
-  mix-blend-mode: multiply;
-  height: 96px;
-  padding: 23px;
-  position: relative;
-  top: -25px;
-  left: -26px;
-  border-radius: 50%;
-}
-
-.btnVoltar:hover{
-  background-color: #009BBD;
-}
-
-
-.btnVoltar:hover img{
-  /* filter: invert(1); */
-  mix-blend-mode:color-burn;
+.btnVoltar img{
+  width: 110px;
 }
 
 #loading{
@@ -223,8 +214,12 @@ section#menuElement {
 
 .modal-content{
   background-color: transparent;
-  border: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   align-items: center;
+  border:none;
 }
 
 .btnReiniciar{
@@ -403,8 +398,8 @@ section#menuElement {
 
 .btnInfo{
   position: absolute;
-  top: 6.5%;
-  left: 0;
+  top: 74px;
+  right: 127px;
   margin: 0;
 }
 

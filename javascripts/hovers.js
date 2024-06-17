@@ -5,6 +5,16 @@ function hoverImages(e, url){
   e.setAttribute("src", `https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/${url}.svg`)
 }
 
+function hoverImagesPng(e, url){
+  /*e.setAttribute("src", `/assets/${url}.svg`);*/
+  e.setAttribute("src", `https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/${url}.png`)
+}
+function tiraHoverPng(e, url){
+  /*e.setAttribute("src", `/assets/${url}.svg`);*/
+  e.setAttribute("src", `https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/${url}.png`)
+}
+
+
 function tiraHover(e, url){
   /*e.setAttribute("src", `/assets/${url}.svg`);*/
   e.setAttribute("src", `https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/${url}.svg`)

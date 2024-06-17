@@ -276,6 +276,65 @@
   <!-- Analytics. Remova em caso de reutilização do REA -->
   <script src="https://apps.univesp.br/common/analytics.js"></script>
 
+  <script>
+    // Função para pré-carregar o vídeo e imagem
+    function preloadVideo() {
+      var video1 = document.createElement('video');
+      video1.src = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/amazonia.mp4';
+      video1.preload = 'auto';
+      video1.load();
+      
+      var video2 = document.createElement('video');
+      video2.src = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/pantanal.mp4';
+      video2.preload = 'auto';
+      video2.load();      
+
+      var video3 = document.createElement('video');
+      video3.src = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/cerrado.mp4';
+      video3.preload = 'auto';
+      video3.load();
+
+      var video4 = document.createElement('video');
+      video4.src = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/caatinga.mp4';
+      video4.preload = 'auto';
+      video4.load();
+
+      var video5 = document.createElement('video');
+      video5.src = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/mata_atlantica.mp4';
+      video5.preload = 'auto';
+      video5.load();
+
+      var video6 = document.createElement('video');
+      video6.src = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/pampas.mp4';
+      video6.preload = 'auto';
+      video6.load();
+
+       // Pré-carregar a imagem
+       var imageQuiz1 = document.createElement('img');
+       imageQuiz1.src = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-pantanal.png';
+
+       var imageQuiz3 = document.createElement('img');
+       imageQuiz3.src = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-amaz.png';
+
+       var imageQuiz2 = document.createElement('img');
+       imageQuiz2.src = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-caatinga.png';
+
+       var imageQuiz4 = document.createElement('img');
+       imageQuiz4.src = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-cerrado.png';
+
+       var imageQuiz5 = document.createElement('img');
+       imageQuiz5.src = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-mata.png';
+
+       var imageQuiz6 = document.createElement('img');
+       imageQuiz6.src = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/tela-pampas.png';
+    
+    }
+
+    window.addEventListener('load', function() {
+      preloadVideo();
+    });
+  </script>
+
 </body>
 
 </html>

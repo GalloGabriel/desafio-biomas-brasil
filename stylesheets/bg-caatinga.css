@@ -23,3 +23,13 @@
 .carousel-indicators .active{
   background-color: #EA7C2C;
 }
+
+
+.btnConfig-som {
+  top: 5%;
+  right: 9%;
+}
+
+.btnConfig-perfil {
+  display: none;
+}

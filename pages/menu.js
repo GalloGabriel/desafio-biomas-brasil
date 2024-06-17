@@ -150,9 +150,7 @@ menuElement.innerHTML = `
             <span id="contentQtdeCardsStatus"></span>
           </div>
   
-          <div class="botao-acessar-dicas">
-            <img src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/bt_acessar.svg" alt="" onmouseover="hoverImages(this, 'bt_acessar-over')" onmouseout="tiraHover(this, 'bt_acessar')">
-          </div>
+
           
         </div>
   

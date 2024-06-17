@@ -11,8 +11,7 @@ btnMenuContainer.forEach(e => {
           data-toggle="modal" 
           data-target="#exampleModalSom">
 
-          <div id="btnInfoMenu"><img onmouseover="hoverImages(this, 'btn-menu-info-over')" onmouseout="tiraHover(this, 'btn-menu-info')" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu-info.svg" alt="" class="btnConfig-config" ></div>
-
+         
           <div id="botaoStatusContainer"><img id="botaoMenuStatusJogo" title="status" onmouseover="hoverImages(this, 'btn-menu_perfil-off')" onmouseout="tiraHover(this, 'btn-menu_perfil-off')" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_perfil-off.svg" alt="" class="btnConfig-perfil" ></div>
 
           
