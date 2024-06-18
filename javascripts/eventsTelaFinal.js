@@ -1,4 +1,4 @@
-
+localStorage.setItem('firstTelaFinal', true);
 setTimeout(()=>{
   let timeLeft = 10;
   let RedirectTimer = setInterval(()=>{

@@ -149,7 +149,7 @@ function trocaAutomaticaModal(){
 }
 
 function chamaLoading(element){
-  console.log("chamou loading");
+  //console.log("chamou loading");
   loadingBox.style.display = 'flex';
   loadingBox.innerHTML = `
     <div class="loading-icon-container">
@@ -203,7 +203,8 @@ function resetarJogo(){
     "parabens6",
     "parabens3",
     "questoesStorageBioma2",
-    "questoesCorretasBioma4"
+    "questoesCorretasBioma4",
+    "firstTelaFinal"
 ];
 
     storages.map((items)=>{

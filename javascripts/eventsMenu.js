@@ -13,6 +13,7 @@ const disabledCard = `pointer-events: none; cursor: not-allowed;`;
 const pontosConquistadosResumo = document.querySelector('#pontosConquistadosResumo');
 const cardsConcluidosResumo = document.querySelector('#cardsConcluidosResumo');
 
+
 // Define array que irá conter as qtdes de questoes corretas de cada bloco
 let arrQtdeQuestoesCorretas = [];
 let cardsCompletos = 0;
@@ -115,7 +116,7 @@ for (let i = 0; i < 6; i++){
   }
 }
 
-let arrPontuacoesPossiveis = [20, 40, 60];
+let arrPontuacoesPossiveis = [20, 40, 60, 61];
 
 for (let i = 0; i < arrPontuacoesPossiveis.length; i++) {
   if(!localStorage.getItem(`status${i+1}`)){
@@ -154,7 +155,9 @@ $('.botao-acessar-dicas').click(function(){
   $('#modalStatus').modal('hide');
 
   for (let i = 0; i < arrPontuacoesPossiveis.length; i++){
-    if(somaPontuacao === arrPontuacoesPossiveis[i]){
+    if(somaPontuacao >= arrPontuacoesPossiveis[i] && somaPontuacao < arrPontuacoesPossiveis[i+1]){
+
+      console.log(i)
 
       voceSabiaImg.innerHTML = `<img src="${BASE_IMG_URL}/voce-sabia${i+1}.svg" alt="">`;
 
@@ -190,9 +193,14 @@ $('.botao-acessar-dicas').click(function(){
 });
 
 
+
 //Verifica pontuação para ir para Tela Final
-$('#modalStatus').on('hide.bs.modal', function(e){
-  if(somaPontuacao === qtdeTotalQuestoes && localStorage.getItem('saibaMais') === 'false'){
+$('#modalStatus').on('hide.bs.modal', async function(e){
+  if(somaPontuacao === qtdeTotalQuestoes 
+      && localStorage.getItem('saibaMais') === 'false'
+      && !localStorage.getItem('firstTelaFinal')
+    ){
+    
     setTimeout(()=>{
       // window.location.href = 'http://127.0.0.1:5500/tela-final.html'
       window.location.href = 'http://127.0.0.1:5501/tela-final.html'
@@ -202,8 +210,14 @@ $('#modalStatus').on('hide.bs.modal', function(e){
 
 
 $('#modalSaibaMais').on('hide.bs.modal', function(e){
+  $('.nextSaibaMais-item').remove();
+  nextItemsArray = [];
+
   localStorage.setItem('saibaMais', false)
-  if(somaPontuacao === qtdeTotalQuestoes){
+  if(somaPontuacao === qtdeTotalQuestoes 
+      && localStorage.getItem('saibaMais') === 'false'
+      && !localStorage.getItem('firstTelaFinal')
+    ){
     setTimeout(()=>{
       // window.location.href = 'http://127.0.0.1:5500/tela-final.html'
       window.location.href = 'http://127.0.0.1:5501/tela-final.html'

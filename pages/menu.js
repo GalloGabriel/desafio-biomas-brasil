@@ -149,8 +149,6 @@ menuElement.innerHTML = `
           <div class="qtde-cards-status" style="bottom: 215px; left: 315px;">
             <span id="contentQtdeCardsStatus"></span>
           </div>
-  
-
           
         </div>
   
