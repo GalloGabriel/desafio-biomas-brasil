@@ -7,6 +7,7 @@ e.innerHTML = `
     onmouseover="hoverImagesPng(this, 'back-over')"  
     onmouseout="tiraHoverPng(this, 'back')" 
     onclick="voltar()"
+    style="cursor: pointer;"
     alt="">
 `
 })
