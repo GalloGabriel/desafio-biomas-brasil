@@ -218,12 +218,14 @@ if(somaPontuacao >= 20){
   botaoStatusContainer.innerHTML = `<img id="botaoMenuStatusJogo" title="status" onmouseover="hoverImages(this, 'btn-menu_perfil-over')" onmouseout="tiraHover(this, 'btn-menu_perfil')" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/btn-menu_perfil.svg" alt="" class="btnConfig-perfil" data-toggle="modal" data-target="#modalStatus">`
 
   $("#botaoMenuStatusJogo").click(function(){
-    let valorPontuacao = 1;
+    let valorPontuacao = 0;
 
-    if(somaPontuacao > 40){
-      valorPontuacao = 3
-    } else if(somaPontuacao > 20){
-      valorPontuacao = 2
+    if(somaPontuacao == 60){
+      valorPontuacao = 3;
+    } else if(somaPontuacao >= 40){
+      valorPontuacao = 2;
+    } else if(somaPontuacao >= 20){
+      valorPontuacao = 1;
     }
 
     statusImage.innerHTML = `<img src="${BASE_IMG_URL}/status${valorPontuacao}.svg" alt="">`;
