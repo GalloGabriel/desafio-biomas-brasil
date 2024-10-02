@@ -62,7 +62,7 @@ let saibaMaisTerra = [
       <p class="conteudoVoceSabia" style="width: 85%">
         ● Estimule o uso consciente da água, incentivando a coleta de água da chuva e a adoção de práticas de reuso.
         </br>
-        ● Promova a educação ambiental sobre a importância da conservação da vegetação nativa e a adoção de técnicas de agricultura sustentável, como a agricultura famipar.
+        ● Promova a educação ambiental sobre a importância da conservação da vegetação nativa e a adoção de técnicas de agricultura sustentável, como a agricultura familiar.
       </p>
     `
   },
