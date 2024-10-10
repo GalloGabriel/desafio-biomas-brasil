@@ -18,7 +18,7 @@ let quizPampas = [
         "ordem": Math.floor(Math.random() * 1000000),
         "alternativaId": 1,
         "questaoCorreta": true,
-        "questaoText": "Pampas"
+        "questaoText": "Pampa"
       },
 
       {
@@ -46,7 +46,7 @@ let quizPampas = [
 
   {
     "questaoId": 2,
-    "titulo": "Aproximadamente qual porcentagem do território brasileiro é ocupada pelos Pampas?",
+    "titulo": "Aproximadamente qual porcentagem do território brasileiro é ocupada pelo Pampa?",
     "topico": "Extensão territorial",
     "questaoFeitaCorreta": "false",
 
@@ -90,7 +90,7 @@ let quizPampas = [
 
   {
     "questaoId": 3,
-    "titulo": "Quais são as unidades da federação que fazem parte do bioma dos Pampas?",
+    "titulo": "Quais são as unidades da federação que fazem parte do bioma Pampa?",
     "topico": "Unidades da Federação",
     "questaoFeitaCorreta": "false",
 
@@ -134,7 +134,7 @@ let quizPampas = [
 
   {
     "questaoId": 4,
-    "titulo": "Qual tipo de vegetação é característico dos Pampas?",
+    "titulo": "Qual tipo de vegetação é característico do Pampa?",
     "topico": "Fauna e Flora",
     "questaoFeitaCorreta": "false",
 
@@ -178,7 +178,7 @@ let quizPampas = [
 
   {
     "questaoId": 5,
-    "titulo": "Quais são os principais desafios enfrentados pelo bioma dos Pampas?",
+    "titulo": "Quais são os principais desafios enfrentados pelo bioma do Pampa?",
     "topico": "Desafios do Bioma",
     "questaoFeitaCorreta": "false",
 
@@ -222,7 +222,7 @@ let quizPampas = [
 
   {
     "questaoId": 6,
-    "titulo": "O que faz dos Pampas um ecossistema peculiar?",
+    "titulo": "O que faz do Pampa um ecossistema peculiar?",
     "topico": "Fatos Peculiares",
     "questaoFeitaCorreta": "false",
 
@@ -266,7 +266,7 @@ let quizPampas = [
 
   {
     "questaoId": 7,
-    "titulo": "Qual é uma das principais atividades econômicas nos Pampas?",
+    "titulo": "Qual é uma das principais atividades econômicas no Pampa?",
     "topico": "Principais Atividades Econômicas",
     "questaoFeitaCorreta": "false",
 
@@ -310,7 +310,7 @@ let quizPampas = [
 
   {
     "questaoId": 8,
-    "titulo": `Qual cultura agrícola é destacada nos Pampas?`,
+    "titulo": `Qual cultura agrícola é destacada no Pampa?`,
     "topico": "Principais Atividades Econômicas",
     "questaoFeitaCorreta": "false",
 
@@ -354,7 +354,7 @@ let quizPampas = [
 
   {
     "questaoId": 9,
-    "titulo": "Qual animal é considerado um símbolo dos Pampas?",
+    "titulo": "Qual animal é considerado um símbolo do Pampa?",
     "topico": "Curiosidades Exclusivas",
     "questaoFeitaCorreta": "false",
 
@@ -398,7 +398,7 @@ let quizPampas = [
 
   {
     "questaoId": 10,
-    "titulo": `Onde está localizada a maior colônia de leões-marinhos da América do Sul, presente nos Pampas?`,
+    "titulo": `Onde está localizada a maior colônia de leões-marinhos da América do Sul, presente no Pampa?`,
     "topico": "Curiosidades Exclusivas",
     "questaoFeitaCorreta": "false",
 

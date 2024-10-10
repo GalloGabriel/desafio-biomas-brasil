@@ -34,7 +34,7 @@ menuElement.innerHTML = `
           </div>
           
           <div class="eachCard" id="cardPampas">
-            <img src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/c1-pampas.svg" alt="Pampas" class="cards-image" onclick="goTo('pampas')" onmouseover="hoverImages(this, 'c1_pampas-over')" onmouseout="tiraHover(this, 'c1-pampas')">
+            <img style="width: 100%" src="https://apps.univesp.br/_testes/desafio-biomas-do-brasil/assets/c1-pampas.svg" alt="Pampas" class="cards-image" onclick="goTo('pampas')" onmouseover="hoverImages(this, 'c1_pampas-over')" onmouseout="tiraHover(this, 'c1-pampas')">
             <span class="pontuacao-menu"></span>
           </div>
         </div>

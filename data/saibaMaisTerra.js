@@ -69,7 +69,7 @@ let saibaMaisTerra = [
 
   {
     "saibaMaisId": 6,
-    "titulo": "Pampas:",
+    "titulo": "Pampa:",
     "conteudo": `
       <p class="conteudoVoceSabia" style="width: 85%">
         ● Valorize e apoie a produção de apmentos e produtos locais, contribuindo para a economia local e a preservação dos recursos naturais.

@@ -164,7 +164,7 @@ let quizAmazonia = [
         "ordem": Math.floor(Math.random() * 1000000),
         "alternativaId": 3,
         "questaoCorreta": false,
-        "questaoText": "Pampas"
+        "questaoText": "Pampa"
       },
 
       {

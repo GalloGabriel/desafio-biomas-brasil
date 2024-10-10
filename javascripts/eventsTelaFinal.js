@@ -1,3 +1,4 @@
+/*
 localStorage.setItem('firstTelaFinal', true);
 setTimeout(()=>{
   let timeLeft = 10;
@@ -21,10 +22,16 @@ setTimeout(()=>{
 
 
 setTimeout(()=>{
+  */
   /*window.location.href = 'http://127.0.0.1:5501/menu.html';*/
   // window.location.href = 'http://127.0.0.1:5500/menu.html'
   
   // window.location.href = 'http://127.0.0.1:5500/index.html'
-  window.location.href = 'http://127.0.0.1:5501/index.html'
+  /*window.location.href = 'http://127.0.0.1:5501/index.html'
 }, 21500)
+*/
+
+$('.btn-videos-biomas').click(() => {
+  window.location.href = 'https://apps.univesp.br/_testes/desafio-biomas-do-brasil/videos-biomas.html'
+})
 
